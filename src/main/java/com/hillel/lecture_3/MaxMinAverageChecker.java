@@ -5,27 +5,33 @@ package com.hillel.lecture_3;
  */
 public class MaxMinAverageChecker {
 
-    public int getMaxNumber(int a, int b , int c) {
+    public int getMaxNumber(int a, int b, int c) {
 
 //        TODO implements result
         int result = 0;
-
+        if (a < b && a < c && a < b && b < c && c > a && c > b) {
+            result = c;
+        }
         return result;
     }
 
-    public int getAverageNumber(int a, int b , int c) {
+    public int getAverageNumber(int a, int b, int c) {
 
 //        TODO implements result
         int result = 0;
-
+        if (a < b && a < c && a < b && b < c && c > a && c > b) {
+            result = b;
+        }
         return result;
     }
 
-    public int getMinNumber(int a, int b , int c) {
+    public int getMinNumber(int a, int b, int c) {
 
 //        TODO implements result
         int result = 0;
-
+        if (a < b && a < c && a < b && b < c && c > a && c > b) {
+            result = a;
+        }
         return result;
     }
 }

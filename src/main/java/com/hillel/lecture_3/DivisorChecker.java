@@ -7,7 +7,11 @@ public class DivisorChecker {
 
     public String checkDivisor(int divisor, int number) {
         //        TODO implements result
-        String result = "";
+        String result = "The number " + divisor + " is divisor of the number 10";
+        if (divisor%number == 0 || number%divisor == 0);
+        else {
+            result = "The number " + divisor + " is not divisor of the number 50";
+        }
 
         return result;
     }

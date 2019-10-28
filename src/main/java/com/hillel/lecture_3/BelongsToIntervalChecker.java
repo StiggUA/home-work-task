@@ -6,8 +6,11 @@ package com.hillel.lecture_3;
 public class BelongsToIntervalChecker {
 
     public String checkNumberInInterval(int from, int to, int number) {
-
-        String result = "";
+        String result = "Number " + number + " belong to interval [-5;3]";
+        if (number >= from && number <= to);
+        else {
+            result = "Number " + number + " not belong to interval [-5;3]";
+        }
 
         return result;
     }

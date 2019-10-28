@@ -8,8 +8,10 @@ public class PassFailChecker {
     public String checkNumber(int number) {
 
 //        TODO implements result
-        String result = "";
-
+        String result = "PASS";
+        if (number >= 50);
+        else { result = "FAIL";
+        }
         return result;
     }
 }
