@@ -11,8 +11,10 @@ public class DecimalToHexadecimalChecker {
     public String fromDecimalToHexadecimal(int value) {
 
 //        TODO implements result
-        String result = "";
-
+        String result = ""; {
+            result = Integer.toHexString(value);
+            result = result.toUpperCase() ;
+        }
         return result;
     }
 
@@ -21,7 +23,9 @@ public class DecimalToHexadecimalChecker {
 
 //        TODO implements result
         int result = 0;
-
+        {
+            result = Integer.parseInt(value, 16);
+        }
         return result;
     }
 }
