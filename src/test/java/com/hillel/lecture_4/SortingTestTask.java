@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 /**
- * Написать программу, которая сортире массив от минимума в максимум и наоборот
+ * Написать программу, которая сортировать массив от минимума в максимум и наоборот
  */
 public class SortingTestTask {
 
@@ -21,7 +21,7 @@ public class SortingTestTask {
 
     @Test
     public void checkFromMaxToMinTest() {
-        int[] data = { 234, 758, -35, 345, 24535, -46, 234, -13, 145 };
+        int[] data = { 234, 758, -35, 345, 24535, -46, 214, -13, 145 };
         int[] expectedResult = {24535, 758, 345, 234, 214, 145, -13, -35, -46};
 
         assertEquals(sortingChecker.fromMaxToMin(data), expectedResult) ;
