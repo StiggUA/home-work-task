@@ -6,9 +6,6 @@ import io.qameta.allure.Step;
  * Created by alpa on 10/25/19
  */
 
-/**
- * Написать программу, которая перевод десятичные числа в двоичные и наоборот.
- */
 public class BinaryToDecimalChecker {
 
     @Step

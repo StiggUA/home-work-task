@@ -16,19 +16,19 @@ public class FibonacciNumbersChecker {
     public int[] getFibonacciNumbers(int number) {
 
 //        TODO implements result
-        int[] result = { };
-        int[] list = new int[20];
-        int w;
-        int z = 1;
-        for (int i = 0; i < 20; i++) {
-            w = z + number;
-            list [0+1] = w;
-            z = number;
-            number = w;
-                        }
-        int size = list.length;
+        int[] result = new int[number];
+        int a = 0;
+        int b = 1;
 
+        for (int i = 0; i < number; i++) {
+            result[i] = a;
+
+            int diff = a;
+            a = b;
+            b = diff + b;
+        }
         return result;
     }
-
 }
+
+

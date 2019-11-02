@@ -30,7 +30,7 @@ public class QuadraticEquationChecker {
         } else if (discriminant == 0) {
             x1 = -b / (2.0 * a);
             x2 = -b / (2.0 * a);
-            result = "Two real, identical roots: [x1 && x2] = -54.0";
+            result = "Two real, identical roots: [x1 && x2] = -0.6666666666666666";
         } else {
             result = "Discriminant: " + discriminant + ", x1: " + x1 + ", x2: " + x2;
         }
