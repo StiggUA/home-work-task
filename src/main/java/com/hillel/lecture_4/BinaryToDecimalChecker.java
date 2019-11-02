@@ -26,7 +26,6 @@ public class BinaryToDecimalChecker {
             }
             x = i + "" + x;
             value = value / 2;
-
             result = Integer.parseInt(x);
         }
         return result;
@@ -34,7 +33,6 @@ public class BinaryToDecimalChecker {
 
     @Step
     public int fromBinaryToDecimal(int value) {
-
 //        TODO implements result
         int result = 0;
         int n = 0;
