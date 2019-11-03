@@ -7,8 +7,10 @@ import io.qameta.allure.Step;
  */
 public class SortingChecker {
 
+
     @Step
     public int[] fromMinToMax(int[] values) {
+
 
 //        TODO implements result int[] data = { 20, 4, 3, 10, 2, -5, 0, -13, 1 };
         int[] result = new int[values.length];

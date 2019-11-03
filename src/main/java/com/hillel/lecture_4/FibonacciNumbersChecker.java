@@ -1,15 +1,11 @@
 package com.hillel.lecture_4;
 
-import edu.emory.mathcs.backport.java.util.Arrays;
 import io.qameta.allure.Step;
 
 /**
  * Created by alpa on 10/25/19
  */
 
-/**
- * Написать программу, которая выводит все числа Фибоначчи до заданного числа
- */
 public class FibonacciNumbersChecker {
 
     @Step
@@ -22,7 +18,6 @@ public class FibonacciNumbersChecker {
 
         for (int i = 0; i < number; i++) {
             result[i] = a;
-
             int diff = a;
             a = b;
             b = diff + b;
