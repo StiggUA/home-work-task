@@ -13,43 +13,41 @@ public class ProductCodeValidationChecker {
 
 //        TODO implements result
         boolean isValid = false;
+       // String upper = code.toUpperCase();
+        char[] lower = code.toCharArray();
+        for(int i=0; i < lower.length; i++){
 
-        code = code.replaceAll("[^0-9]+", "");
+            //if any character is not in lower case, return false
+            if(Character.isLowerCase( lower[i]))
+                return isValid;
+        }
+        String[] parts = code.split(" ");
+        String part1 = parts[0];
+        part1 = part1.replaceAll("[^0-9]", "");
+        String part2 = parts[1];
 
+        char[] charPart1 = part1.toCharArray();
 
-        int count = 0;
+        String a = Character.toString(charPart1[0]);
+        String b = Character.toString(charPart1[1]);
+        String c = Character.toString(charPart1[2]);
+        String d = Character.toString(charPart1[3]);
+        String e = Character.toString(charPart1[4]);
+        String f = Character.toString(charPart1[5]);
 
-        /*System.out.println(split);
+        String first = a + b;
+        String second = c + d;
+        String third = e + f;
 
-        for (int i = 0; i < split.length; i++) {
-            String s = split[i];
-            if (s.length() == 1);
+        int z = Integer.parseInt(first);
+        int x = Integer.parseInt(second);
+        int q = Integer.parseInt(third);
+        int k = z * x * q;
+        String res = Integer.toString(k);
 
-                }*/
-        return isValid;
+       if (res.equals(part2))
+           isValid = true;
+
+       return isValid;
     }
 }
-
-        /*char charAt = code.charAt(0);
-        char charAt1 = code.charAt(1);
-        char charAt2 = code.charAt(2);
-        char charAt3 = code.charAt(3);
-        char charAt4 = code.charAt(4);
-        char charAt5 = code.charAt(5);
-
-        String ch1 = Character.toString(charAt);
-        String ch2 = Character.toString(charAt1);
-        String ch3 = Character.toString(charAt2);
-        String ch4 = Character.toString(charAt3);
-        String ch5 = Character.toString(charAt4);
-        String ch6 = Character.toString(charAt5);
-
-        String first = ch1 + ch2;
-        String second = ch3 + ch4;
-        String third = ch5 + ch6;
-
-        int a = Integer.parseInt(first);
-        int b = Integer.parseInt(second);
-        int c = Integer.parseInt(third);
-
-        if (a*b*c ==*/
