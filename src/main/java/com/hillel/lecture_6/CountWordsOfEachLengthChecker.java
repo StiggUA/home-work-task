@@ -12,8 +12,10 @@ public class CountWordsOfEachLengthChecker {
 
 //        TODO implements result
         int result = 0;
-        String[] split = sentence.split(" ");
-        int count = 0;
+                int count = 0;
+        String first = sentence.replace('.', ' ');
+        String second = first.replace(',', ' ');
+        String[] split = second.split(" ");
 
         for (int i = 0; i < split.length; i++) {
             String s = split[i];
