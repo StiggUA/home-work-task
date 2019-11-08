@@ -30,7 +30,7 @@ public class Formulas {
     }
 
     public double calculate13Formula(double x) {
-        double result = Math.pow(Math.exp(-2 + x), 1/5) * (1 / (Math.sqrt(Math.pow(x, 2) + Math.pow(x, 4) + Math.log(Math.abs(x - 3.14)))));
+        double result = Math.pow(Math.exp(-2d + x), 1d/5d) * (1d / (Math.sqrt(Math.pow(x, 2d) + Math.pow(x, 4d) + Math.log(Math.abs(x - 3.14d)))));
 //        TODO implement formula 13
         return result;
     }
