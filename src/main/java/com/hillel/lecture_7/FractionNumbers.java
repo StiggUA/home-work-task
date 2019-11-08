@@ -35,20 +35,15 @@ public class FractionNumbers {
     public void plus(){
         System.out.println(number1 + number2);
     }
-    public void minus_ab (){
-        System.out.println((number1) - (number2));
+    public void minus (){
+        System.out.println(number1 - number2);
     }
-    public void minus_ba (){
-        System.out.println((number2) - (number1));}
 
     public void multiply(){
         System.out.println(number1 * number2);
     }
-    public void divideOnA(){
-        System.out.println((number2) / (number1));
-    }
-    public void divideOnB(){
-        System.out.println((number1) / (number2));
+    public void divide(){
+        System.out.println(number1 / number2);
     }
 }
 
