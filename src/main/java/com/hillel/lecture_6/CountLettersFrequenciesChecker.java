@@ -17,12 +17,19 @@ public class CountLettersFrequenciesChecker {
 //        TODO implements result
        String result = "";
 
-       Matcher matcher = Pattern.compile(String.valueOf(letter)).matcher(text);
+//       Matcher matcher = Pattern.compile(String.valueOf(letter)).matcher(text);
+//
+//       int counter = 0;
+//       while (matcher.find()) {
+//           counter++;
+//       }
 
-       int counter = 0;
-       while (matcher.find()) {
-           counter++;
-       }
+        int counter = 0;
+        char[] arr = text.toCharArray();
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == letter)
+                counter++;
+        }
        result = "Character '" + letter + "' repeated " + counter  + " times";
 
        return result;
