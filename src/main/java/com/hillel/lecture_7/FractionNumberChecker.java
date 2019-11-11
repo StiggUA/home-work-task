@@ -1,8 +1,5 @@
 package com.hillel.lecture_7;
 
-import java.sql.SQLOutput;
-import java.util.Scanner;
-
 public class FractionNumberChecker {
     public static void main(String[] args) {
         FractionNumbers Numbers = new FractionNumbers(2, 2);
