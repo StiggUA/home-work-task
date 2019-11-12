@@ -15,11 +15,6 @@ package com.hillel.basic.exam;
  * max_rot(56789) should return 68957
  */
 
-//        String res = word;
-//        for (int i = 1; i < word.length(); i++) {
-//        res = res.substring(1) + res.charAt(0);
-//        result = result + ", " + res;
-//        }
 
 public class NumberRotator {
 
@@ -28,17 +23,42 @@ public class NumberRotator {
         String res = l;
         long result = 0;
 
-
         for (int i = 0; i < 1; i++) {
             res = res.substring(1) + res.charAt(0);
-            long num = Long.parseLong(res);
-            result = num;
-            for (int j = 0; j < 1; j++) {
-                res = res.substring(1) + res.charAt(0);
-            }
-        }
-        System.out.println();
-            return result;
+
+            String res1 = res;
+            res1 = res1.substring(3) + res1.charAt(1);
+            String temp2 = res.charAt(2) + res1.substring(0);
+            String res2 = res.charAt(0) + temp2.substring(0);
+
+            String restemp1 = res2.substring(3) + res2.charAt(2);
+            String restemp2 = restemp1.substring(1) + restemp1.charAt(0);
+            String temp3 = res2.charAt(1) + restemp2.substring(0);
+            String res3 = res2.charAt(0) + temp3.substring(0);
+
+            String restemp3 = res3.substring(4) + res3.charAt(3);
+            String restemp4 = restemp3.substring(1) + restemp3.charAt(0);
+            String restemp5 = restemp4.substring(1) + restemp4.charAt(0);
+            String temp4 = res3.charAt(2) + restemp5.substring(0);
+            String temp5 = res3.charAt(1) + temp4.substring(0);
+            String res4 = res3.charAt(0) + temp5.substring(0);
+
+            long a = Long.parseLong(res);
+            long b = Long.parseLong(res2);
+            long c = Long.parseLong(res3);
+            long d = Long.parseLong(res4);
+
+            if (a > b && a > c && a > d)
+                result = a;
+            else if (b > a && b > c && b > d)
+                result = b;
+            else if (c > c && c > b && c > d)
+                result = c;
+            else
+                result = d;
 
         }
+            return result;
+        }
+
     }
