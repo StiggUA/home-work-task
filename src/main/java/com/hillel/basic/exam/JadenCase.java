@@ -21,16 +21,14 @@ import org.apache.velocity.tools.view.VelocityLayoutServlet;
 public class JadenCase {
 
     public String toJadenCase(String phrase) {
-
         String result = "";
+        if (phrase == null){
+            return null;}
+        else if (phrase.equals("")){
+            return null;
+        }
         char array[] = phrase.toCharArray();
-        if (phrase.equals("")){
-            result = null;
-        }
-        else if (array == null){
-            result = phrase;
-        }
-        else if (array != null)
+        if (phrase != null)
             array[0] = Character.toUpperCase(array[0]);
             for (int i = 1; i < array.length; i++) {
             if (Character.isWhitespace(array[i - 1])) {

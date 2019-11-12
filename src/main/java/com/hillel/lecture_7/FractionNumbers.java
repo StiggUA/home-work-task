@@ -31,18 +31,18 @@ public class FractionNumbers {
         return "Default number are: " + number1 + " and " + number2;
     }
 
-    public void plus(){
-        System.out.println(number1 + number2);
+    public double plus(){
+        return number1 + number2;
     }
-    public void minus (){
-        System.out.println(number1 - number2);
+    public double minus (){
+        return number1 - number2;
     }
 
-    public void multiply(){
-        System.out.println(number1 * number2);
+    public double multiply(){
+        return number1 * number2;
     }
-    public void divide(){
-        System.out.println(number1 / number2);
+    public double divide(){
+        return number1 / number2;
     }
 }
 
