@@ -23,9 +23,21 @@ package com.hillel.basic.exam;
  * Return the words of the initial song that Polycarpus used to make a dubsteb remix. Separate the words with a space.
  */
 
+//{ "RWUBWUBWUBLWUB", "R L"},
+
 public class Dubster {
 
     public static String songDecoder(String song) {
-        return null;
+        String result = "";
+
+        String replacer1 = song.replace("WUB", " ");
+        replacer1 = replacer1.replaceAll("\\s+", " ");
+
+        String trim = replacer1.trim();
+        result = trim;
+
+        return result;
+        }
+
     }
-}
+

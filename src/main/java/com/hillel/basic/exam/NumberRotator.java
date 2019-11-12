@@ -15,9 +15,30 @@ package com.hillel.basic.exam;
  * max_rot(56789) should return 68957
  */
 
+//        String res = word;
+//        for (int i = 1; i < word.length(); i++) {
+//        res = res.substring(1) + res.charAt(0);
+//        result = result + ", " + res;
+//        }
+
 public class NumberRotator {
 
     public static long rotate(long n) {
-        return 0;
+        String l = Long.toString(n);
+        String res = l;
+        long result = 0;
+
+
+        for (int i = 0; i < 1; i++) {
+            res = res.substring(1) + res.charAt(0);
+            long num = Long.parseLong(res);
+            result = num;
+            for (int j = 0; j < 1; j++) {
+                res = res.substring(1) + res.charAt(0);
+            }
+        }
+        System.out.println();
+            return result;
+
+        }
     }
-}
