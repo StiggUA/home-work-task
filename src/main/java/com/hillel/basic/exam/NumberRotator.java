@@ -52,7 +52,7 @@ public class NumberRotator {
                 result = a;
             else if (b > a && b > c && b > d)
                 result = b;
-            else if (c > c && c > b && c > d)
+            else if (c > a && c > b && c > d)
                 result = c;
             else
                 result = d;
