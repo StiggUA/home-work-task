@@ -1,6 +1,6 @@
-package com.hillel.Lecture_10;
+package com.hillel.Lecture_10.Galactic;
 
-public class Star extends Galactic {
+public class Star extends AbstractGalactic {
     @Override
     public void name() {
         System.out.println(String.format("%s -> Hello! I am thr Sun!", this.getClass().getSimpleName()));

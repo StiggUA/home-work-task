@@ -1,6 +1,6 @@
-package com.hillel.Lecture_10;
+package com.hillel.Lecture_10.Galactic;
 
-public class Planet extends Galactic {
+public class Planet extends AbstractGalactic {
     @Override
     public void name() {
         System.out.println(String.format("%s -> Earth", this.getClass().getSimpleName()));

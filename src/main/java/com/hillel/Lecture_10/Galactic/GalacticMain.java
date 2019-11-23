@@ -1,4 +1,4 @@
-package com.hillel.Lecture_10;
+package com.hillel.Lecture_10.Galactic;
 
 public class GalacticMain {
     public static void main(String[] args) {
@@ -32,3 +32,4 @@ public class GalacticMain {
         planet.people();
     }
 }
+

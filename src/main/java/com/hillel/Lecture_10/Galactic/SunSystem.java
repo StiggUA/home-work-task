@@ -1,6 +1,6 @@
-package com.hillel.Lecture_10;
+package com.hillel.Lecture_10.Galactic;
 
-public class SunSystem extends Galactic {
+public class SunSystem extends AbstractGalactic {
 
     @Override
     public void name() {
@@ -9,7 +9,7 @@ public class SunSystem extends Galactic {
 
     @Override
     public void starMove() {
-        System.out.println(String.format("%s -> All planets move around each other", this.getClass().getSimpleName()));
+        System.out.println(String.format("%s -> All planets move around the Sun", this.getClass().getSimpleName()));
     }
     @Override
     public void speed() {

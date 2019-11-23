@@ -1,6 +1,6 @@
-package com.hillel.Lecture_10;
+package com.hillel.Lecture_10.Galactic;
 
-public abstract class Galactic {
+public abstract class AbstractGalactic {
     public abstract void name();
 
     public abstract void starMove();
@@ -12,5 +12,4 @@ public abstract class Galactic {
     public abstract void life();
 
     public abstract void weight();
-
 }
