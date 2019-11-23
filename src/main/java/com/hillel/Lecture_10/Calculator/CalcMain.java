@@ -10,17 +10,29 @@ public class CalcMain {
         usualCalc.divide(78, 3);
 
         Financial financial = new Financial();
+        financial.plus(60, 3);
+        financial.multiply(855, 16);
+        financial.multiply(-13.3, 80);
+        financial.divide(98, 3);
         financial.discount(8000);
         financial.perpet(3000);
         financial.credit(7999);
 
         Accounting accounting = new Accounting();
+        accounting.plus(60, 3);
+        accounting.multiply(855, 16);
+        accounting.multiply(-13.3, 80);
+        accounting.divide(98, 3);
         accounting.markUp(500);
         accounting.murkDown(240);
         accounting.VAT(1000);
         accounting.currency(1300);
 
         Engineer engineer = new Engineer();
+        engineer.plus(60, 3);
+        engineer.multiply(855, 16);
+        engineer.multiply(-13.3, 80);
+        engineer.divide(98, 3);
         engineer.degrees(90);
         engineer.celsiusToFahrenheit(150);
         engineer.dayToSec(2);
@@ -29,6 +41,10 @@ public class CalcMain {
         engineer.poundsToKilograms(7.5);
 
         Programming programming = new Programming();
+        programming.plus(60, 23);
+        programming.multiply(855, 416);
+        programming.multiply(-13.3, 180);
+        programming.divide(98, 63);
         programming.cycleCount(5);
         programming.random(80);
         programming.stars(7);
