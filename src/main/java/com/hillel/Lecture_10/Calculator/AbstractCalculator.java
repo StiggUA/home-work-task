@@ -2,9 +2,9 @@ package com.hillel.Lecture_10.Calculator;
 
 public abstract class AbstractCalculator {
 
-    public abstract void plus(double a, double b);
-    public abstract void minus(double a, double b);
-    public abstract void multiply(double a, double b);
-    public abstract void divide(double a, double b);
+    public void plus(double a, double b) {System.out.println(a + b);}
+    public void minus(double a, double b) {System.out.println(a - b); }
+    public void multiply(double a, double b) {System.out.println(a * b);}
+    public void divide(double a, double b) {System.out.println(a / b);}
 
 }
