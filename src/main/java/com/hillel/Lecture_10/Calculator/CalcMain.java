@@ -24,8 +24,8 @@ public class CalcMain {
         accounting.multiply(-13.3, 80);
         accounting.divide(98, 3);
         accounting.markUp(500);
-        accounting.murkDown(240);
-        accounting.VAT(1000);
+        accounting.murkDown(600);
+        accounting.VAT(1000, 15);
         accounting.currency(1300);
 
         Engineer engineer = new Engineer();
