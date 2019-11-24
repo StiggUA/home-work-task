@@ -22,21 +22,21 @@ public class NumberRotator {
         String l = Long.toString(n);
         long result = 0;
         char[] arr = l.toCharArray();
-        long[] longArray = new long[arr.length];
-        for (int i = 0; i < 4; i++) {
+        long[] maxArr = new long[arr.length];
+                for (int i = 0; i < 4; i++) {
             char temp = arr[i];
             for (int j = i + 1 ; j < arr.length; j++) {
                 arr[j-1] = arr[j];
             }
-            arr[arr.length - 1] = temp;
+            arr[arr.length-1] = temp;
             String charRes = String.valueOf(arr);
             long res = Long.parseLong(charRes);
-            longArray[i] = res;
+            maxArr[i] = res;
         }
-        long max = longArray[0];
-        for (int j = 0; j < longArray.length; j++){
-             if (longArray[j] > max)
-                 max = longArray[j];
+        long max = maxArr[0];
+        for (int j = 0; j < maxArr.length; j++){
+             if (maxArr[j] > max)
+                 max = maxArr[j];
              {
                  result = max;
              }
