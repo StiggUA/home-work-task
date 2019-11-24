@@ -6,12 +6,12 @@ public class CalcMain {
         UsualCalc usualCalc = new UsualCalc();
         usualCalc.plus(80, 3);
         usualCalc.multiply(25.2, 16);
-        usualCalc.multiply(-15.3, 80);
+        usualCalc.minus(-15.3, 80);
         usualCalc.divide(78, 3);
 
         Financial financial = new Financial();
         financial.plus(60, 3);
-        financial.multiply(855, 16);
+        financial.minus(855, 16);
         financial.multiply(-13.3, 80);
         financial.divide(98, 3);
         financial.discount(8000);
@@ -20,7 +20,7 @@ public class CalcMain {
 
         Accounting accounting = new Accounting();
         accounting.plus(60, 3);
-        accounting.multiply(855, 16);
+        accounting.minus(855, 16);
         accounting.multiply(-13.3, 80);
         accounting.divide(98, 3);
         accounting.markUp(500);
@@ -30,7 +30,7 @@ public class CalcMain {
 
         Engineer engineer = new Engineer();
         engineer.plus(60, 3);
-        engineer.multiply(855, 16);
+        engineer.minus(55, 16);
         engineer.multiply(-13.3, 80);
         engineer.divide(98, 3);
         engineer.degrees(90);
@@ -42,7 +42,7 @@ public class CalcMain {
 
         Programming programming = new Programming();
         programming.plus(60, 23);
-        programming.multiply(855, 416);
+        programming.minus(38, 46);
         programming.multiply(-13.3, 180);
         programming.divide(98, 63);
         programming.cycleCount(5);
