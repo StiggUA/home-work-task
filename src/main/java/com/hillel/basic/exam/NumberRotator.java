@@ -20,10 +20,32 @@ public class NumberRotator {
 
     public static long rotate(long n) {
         String l = Long.toString(n);
-        String res = l;
         long result = 0;
+        char[] arr = l.toCharArray();
+        long[] longArray = new long[arr.length];
+        for (int i = 0; i < 4; i++) {
+            char temp = arr[i];
+            for (int j = i + 1 ; j < arr.length; j++) {
+                arr[j-1] = arr[j];
+            }
+            arr[arr.length - 1] = temp;
+            String charRes = String.valueOf(arr);
+            long res = Long.parseLong(charRes);
+            longArray[i] = res;
+        }
+        long max = longArray[0];
+        for (int j = 0; j < longArray.length; j++){
+             if (longArray[j] > max)
+                 max = longArray[j];
+             {
+                 result = max;
+             }
+         }
+         return result;
+        }
+    }
 
-        for (int i = 0; i < 1; i++) {
+        /*for (int i = 0; i < 1; i++) {
             res = res.substring(1) + res.charAt(0);
 
             String res1 = res;
@@ -43,7 +65,6 @@ public class NumberRotator {
             String temp5 = res3.charAt(1) + temp4.substring(0);
             String res4 = res3.charAt(0) + temp5.substring(0);
 
-            long a = Long.parseLong(res);
             long b = Long.parseLong(res2);
             long c = Long.parseLong(res3);
             long d = Long.parseLong(res4);
@@ -55,10 +76,4 @@ public class NumberRotator {
             else if (c > a && c > b && c > d)
                 result = c;
             else
-                result = d;
-
-        }
-            return result;
-        }
-
-    }
+                result = d;*/
