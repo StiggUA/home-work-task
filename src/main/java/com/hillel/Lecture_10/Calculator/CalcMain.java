@@ -16,14 +16,14 @@ public class CalcMain {
         financial.divide(98, 3);
         financial.discount(8000);
         financial.perpet(3000);
-        financial.credit(7999);
+        financial.credit(7999, 5);
 
         Accounting accounting = new Accounting();
         accounting.plus(60, 3);
         accounting.minus(855, 16);
         accounting.multiply(-13.3, 80);
         accounting.divide(98, 3);
-        accounting.markUp(500);
+        accounting.markUp(500, 20);
         accounting.murkDown(600);
         accounting.VAT(1000, 15);
         accounting.currency(1300);
