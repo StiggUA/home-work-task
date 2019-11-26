@@ -17,6 +17,16 @@ public class FinancialCalcTest {
         double result = financial.perpet(7000);
         assertEquals(result, 194.44444444444446);
     }
+    @Test public void perpetTest2() {
+        Financial financial = new Financial();
+        double result = financial.perpet(2500);
+        assertEquals(result, 104.16666666666667);}
+
+    @Test public void perpetTest3() {
+        Financial financial = new Financial();
+        double result = financial.perpet(800);
+        assertEquals(result, 66.66666666666667);}
+
     @Test public void credit() {
         Financial financial = new Financial();
         double result = financial.credit(7000, 5);
