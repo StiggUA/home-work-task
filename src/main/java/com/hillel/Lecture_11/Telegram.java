@@ -3,12 +3,12 @@ package com.hillel.Lecture_11;
 public class Telegram extends ForTelegram{
     @Override
     public void chatWithYourself() {
-        System.out.println("In " + telega + " I can send messages to myself");
+        System.out.println("In " + telega + " I can send messages to myself ");
     }
 
     @Override
     public void addPeopleNearby() {
-        System.out.println("Searching people near you in contacts. Your" + telega);
+        System.out.println("Searching people near you in contacts. Your " + telega);
     }
 
     @Override
@@ -75,7 +75,7 @@ public class Telegram extends ForTelegram{
 
     @Override
     public void messageShare() {
-        System.out.println("Message sharing from" + telega);
+        System.out.println("Message sharing from " + telega);
     }
 
     @Override

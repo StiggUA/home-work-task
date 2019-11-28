@@ -1,6 +1,6 @@
 package com.hillel.Lecture_11;
 
-public interface Messanger {
+public interface Messenger {
     String sendTextMessage();
     void sendVideo();
     void sendPicture();
