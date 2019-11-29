@@ -5,10 +5,11 @@ public class MessengerMain {
         Telegram telegram = new Telegram();
         Viber viber = new Viber();
         WhatsApp whatsApp = new WhatsApp();
-        MyPhone myPhone = new MyPhone("Nokia", whatsApp);
+        MyPhone myPhone = new MyPhone("Nokia", viber);
+        myPhone.platform(viber);
 
         myPhone.channel();
-        myPhone.contactImport();
+        myPhone.contactImp();
         myPhone.videoCalling();
         myPhone.status();
         myPhone.addPeopleNearby();
@@ -29,6 +30,7 @@ public class MessengerMain {
         myPhone.sendVideo();
         myPhone.takePhoto();
         myPhone.takeVideo();
+        myPhone.messageReceive();
     }
 
 }

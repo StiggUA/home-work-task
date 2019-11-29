@@ -1,6 +1,8 @@
 package com.hillel.Lecture_11;
 
-public class WhatsApp extends ForWhatsApp {
+import com.hillel.Lecture_11.AbstractClasses.ForWhatsAppMob;
+
+public class WhatsApp extends ForWhatsAppMob {
     @Override
     public String sendTextMessage() {
         System.out.println("Send messages to all contacts using " + whatsapp);
@@ -47,8 +49,7 @@ public class WhatsApp extends ForWhatsApp {
     @Override
     public String messageReceive() {
         System.out.println("You received incoming text message in " + whatsapp);
-        return "You received incoming text message in " + whatsapp;
-    }
+        return "You received incoming text message in " + whatsapp;}
 
     @Override
     public void messageSearch() {
@@ -78,8 +79,7 @@ public class WhatsApp extends ForWhatsApp {
     @Override
     public String myStatus() {
         System.out.println("You can create your status using " + whatsapp);
-        return "You can create your status using " + whatsapp;
-    }
+        return "You can create your status using " + whatsapp;}
 
     @Override
     public void videoCall() {

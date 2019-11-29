@@ -1,11 +1,12 @@
 package com.hillel.Lecture_11;
 
-public class Viber extends ForViber {
+import com.hillel.Lecture_11.AbstractClasses.ForViberMob;
+
+public class Viber extends ForViberMob {
     @Override
     public String sendTextMessage() {
         System.out.println("Send messages to all contacts using " + viber);
-        return "Send messages to all contacts using " + viber;
-    }
+        return "Send messages to all contacts using " + viber;}
 
     @Override
     public void sendVideo() {
@@ -20,7 +21,6 @@ public class Viber extends ForViber {
     public void sendFile() {
         System.out.println("The file was sent by " + viber);
     }
-
     @Override
     public void audioCall() {
         System.out.println("Hi! A call you via " + viber + ". Nice to hear you");
@@ -48,8 +48,7 @@ public class Viber extends ForViber {
     @Override
     public String messageReceive() {
         System.out.println("You received incoming text message in " + viber);
-        return "You received incoming text message in " + viber;
-    }
+        return "You received incoming text message in " + viber;}
 
     @Override
     public void messageSearch() {

@@ -1,6 +1,8 @@
 package com.hillel.Lecture_11;
 
-public class Telegram extends ForTelegram{
+import com.hillel.Lecture_11.AbstractClasses.ForTelegramMob;
+
+public class Telegram extends ForTelegramMob {
     @Override
     public void chatWithYourself() {
         System.out.println("In " + telega + " I can send messages to myself ");
