@@ -62,51 +62,99 @@ public class MyPC {
         System.out.println("Created by company "  + Platform.WHATSAPP.getMaker());
         System.out.println("Downloaded from " + Platform.WHATSAPP.getUrl());}
 
-    public void channel() {
-        if (specialChat == null) {
-            System.out.println("Your messenger does not allow to create channels");
-        } else {
+    public void channel(){
+        try {
             specialChat.createChannel();
         }
+        catch (Exception e){
+            System.err.println(e.getClass());
+            System.err.println("Your messenger does not allow to create channels");
+        }
     }
+//        if (specialChat == null) {
+//            System.out.println("Your messenger does not allow to create channels");
+//        } else {
+//            specialChat.createChannel();;
+//        }
+
     public void privateChat() {
-        if (specialChat == null) {
-            System.out.println("Your messenger does not allow using of private chats");
-        } else {
+        try{
             specialChat.privateChat();
         }
+        catch (Exception e){
+            System.err.println(e.getCause());
+            System.err.println("Exception! Your messenger does not allow using of private chats");
+        }
+//        if (specialChat == null) {
+//            System.out.println("Your messenger does not allow using of private chats");
+//        } else {
+//            specialChat.privateChat();
+//        }
     }
     public void videoCalling() {
-        if (videoCall == null) {
-            System.out.println("Your messenger does not support videocalls");
+        try{
+            videoCall.videoCall();
         }
-        else {
-            videoCall.videoCall();}
+        catch (Exception e){
+            System.err.println(e.getMessage());
+            System.err.println("No video calls in your messenger");
+        }
+
+//        if (videoCall == null) {
+//            System.out.println("Your messenger does not support videocalls");
+//        }
+//        else {
+//            videoCall.videoCall();}
     }
 
     public void outCall() {
-        if (viberOut == null) {
-            System.out.println("Your messenger does not support calls outside");
+        try{
+            viberOut.callViberOut();
         }
-        else {
-            viberOut.callViberOut();}
+        catch (Exception e){
+            System.err.println(e.getCause());
+            System.err.println("Your messenger does not support calls outside");
+        }
+        finally {
+            System.out.println("All benefits of your messenger are listed above");
+        }
+//        if (viberOut == null) {
+//            System.out.println("Your messenger does not support calls outside");
+//        }
+//        else {
+//            viberOut.callViberOut();}
     }
 
 
     public void chatWithYourself() {
-        if (chatSelfWebDesk == null) {
-            System.out.println("Your messenger does not support chatting with yourself");
+        try{
+            chatSelfWebDesk.chatWithYourself();
         }
-        else {
-            chatSelfWebDesk.chatWithYourself();}
+        catch (Exception e){
+            System.err.println(e.hashCode());
+            System.err.println(e.getCause());
+            System.err.println("Your messenger does not support chatting with yourself");
+        }
+//        if (chatSelfWebDesk == null) {
+//            System.out.println("Your messenger does not support chatting with yourself");
+//        }
+//        else {
+//            chatSelfWebDesk.chatWithYourself();}
     }
 
     public void audioCall() {
-        if (specialChat == null){
-            System.out.println("Your messenger does not allow you to call");
+        try{
+            specialChat.audioCall();
         }
-        else {
-        specialChat.audioCall();}
+        catch (Exception e){
+            System.err.println(e.getMessage());
+            System.err.println("The messenger does not allow you to call");
+        }
+//        if (specialChat == null){
+//            System.out.println("Your messenger does not allow you to call");
+//        }
+//        else {
+//        specialChat.audioCall();}
     }
 
     public void sendTextMessage() {
@@ -153,19 +201,3 @@ public class MyPC {
         messenger.messageReceive();
     }
 }
-
-//    public static void platform(Platform platform){
-//        switch (platform){
-//            case TELEGRAM:
-//            System.out.println("This messenger works at: " + Platform.TELEGRAM.getAndroid() + ", " + Platform.TELEGRAM.getIos()
-//                    + ", " + Platform.TELEGRAM.getDesktop() + ", " + Platform.TELEGRAM.getWeb() + ", " + Platform.TELEGRAM.getWindowsPhone());
-//            System.out.println("Created by company "  + Platform.TELEGRAM.getMaker());
-//            case VIBER:
-//                System.out.println("This messenger works at: " + Platform.VIBER.getAndroid() + ", " + Platform.VIBER.getIos()
-//                        + ", " + Platform.VIBER.getDesktop() + ", " + Platform.VIBER.getWeb() + ", " + Platform.VIBER.getWindowsPhone());
-//                System.out.println("Created by company "  + Platform.VIBER.getMaker());
-//            case WHATSAPP:
-//                System.out.println("This messenger works at: " + Platform.WHATSAPP.getAndroid() + ", " + Platform.WHATSAPP.getIos()
-//                        + ", " + Platform.WHATSAPP.getDesktop() + ", " + Platform.WHATSAPP.getWeb() + ", " + Platform.WHATSAPP.getWindowsPhone());
-//                System.out.println("Created by company "  + Platform.WHATSAPP.getMaker());}
-//        }

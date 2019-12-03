@@ -22,7 +22,6 @@ public class MyPhone {
     private ViberDesktop viberDesktop;
     private WhatsAppWeb whatsAppWeb;
 
-
     public MyPhone(String phone, ForTelegramMob telegram) {
         this.phone = phone;
         this.messanger = telegram;
@@ -75,20 +74,36 @@ public class MyPhone {
     }
 
     public void channel() {
-        if (specialChat == null) {
-            System.out.println("Your messenger does not allow to create channels");
-        } else {
-            System.out.println("My " + phone + " + my messenger can:");
+        try{
             specialChat.createChannel();
         }
+        catch (Exception e){
+            System.err.println(e.getCause());
+            System.err.println(e.getStackTrace());
+            System.err.println("Your messenger does not allow to create channels");
+        }
+//        if (specialChat == null) {
+//            System.out.println("Your messenger does not allow to create channels");
+//        } else {
+//            System.out.println("My " + phone + " + my messenger can:");
+//            specialChat.createChannel();
+//        }
     }
     public void privateChat() {
-        if (specialChat == null) {
-            System.out.println("Your messenger does not allow using of private chats");
-        } else {
-            System.out.println("My " + phone + " + my messenger can:");
+        try{
             specialChat.privateChat();
         }
+        catch (Exception e){
+            System.err.println(e.getCause());
+            System.err.println(e.getMessage());
+            System.err.println("Your messenger does not allow using of private chats");
+        }
+//        if (specialChat == null) {
+//            System.out.println("Your messenger does not allow using of private chats");
+//        } else {
+//            System.out.println("My " + phone + " + my messenger can:");
+//            specialChat.privateChat();
+//        }
     }
 
     public void contactImp() {
@@ -97,54 +112,102 @@ public class MyPhone {
     }
 
     public void videoCalling() {
-        if (videoCall == null) {
-            System.out.println("Your messenger does not support videocalls");
+        try{
+            videoCall.videoCall();
         }
-        else {System.out.println("My " + phone + " + my messenger can:");
-        videoCall.videoCall();}
+        catch (Exception e){
+            System.err.println(e.getCause());
+            System.err.println("Your messenger does not support video calls");
+        }
+//        if (videoCall == null) {
+//            System.out.println("Your messenger does not support videocalls");
+//        }
+//        else {System.out.println("My " + phone + " + my messenger can:");
+//        videoCall.videoCall();}
     }
 
     public void outCall() {
-        if (viberOut == null) {
-            System.out.println("Your messenger does not support calls outside");
+        try{
+            viberOut.callViberOut();
         }
-        else {System.out.println("My " + phone + " + my messenger can:");
-        viberOut.callViberOut();}
+        catch (Exception e){
+            System.err.println(e.getCause());
+            System.err.println(e.getClass());
+            System.err.println(e.getStackTrace());
+            System.err.println("Your messenger does not support calls outside");
+        }
+//        if (viberOut == null) {
+//            System.out.println("Your messenger does not support calls outside");
+//        }
+//        else {System.out.println("My " + phone + " + my messenger can:");
+//        viberOut.callViberOut();}
     }
 
     public void status() {
-        if (messanger == whatsApp) {
-            System.out.println("My " + phone + " + my messenger can:");
+        try {
             whatsApp.myStatus();
-        } else {
-            System.out.println("Your messenger does not support status setup");
         }
+        catch (Exception e){
+            System.err.println(e.getCause());
+            System.err.println("Your messenger does not support status setup");
+        }
+//        if (messanger == whatsApp) {
+//            System.out.println("My " + phone + " + my messenger can:");
+//            whatsApp.myStatus();
+//        } else {
+//            System.out.println("Your messenger does not support status setup");
+//        }
     }
 
     public void builtBrowser() {
-        if (chatWithYourself == null) {
-            System.out.println("Your messenger does not support opening links in messanger");
+        try{
+            chatWithYourself.builtInBrowser();
         }
-        else
-        {System.out.println("My " + phone + " + my messenger can:");
-        chatWithYourself.builtInBrowser();}
+        catch (Exception ex){
+            System.err.println(ex.getCause());
+            System.err.println("Your messenger does not support opening links in messanger");
+        }
+//        if (chatWithYourself == null) {
+//            System.out.println("Your messenger does not support opening links in messanger");
+//        }
+//        else
+//        {System.out.println("My " + phone + " + my messenger can:");
+//        chatWithYourself.builtInBrowser();}
     }
 
     public void chatWithYourself() {
-        if (chatWithYourself == null) {
-            System.out.println("Your messenger does not support chatting with yourself");
+        try {
+            chatWithYourself.chatWithYourself();
         }
-        else {System.out.println("My " + phone + " + my messenger can:");
-        chatWithYourself.chatWithYourself();}
+        catch (Exception e){
+            System.err.println(e.getCause());
+            System.err.println("Your messenger does not support chatting with yourself");
+        }
+//        if (chatWithYourself == null) {
+//            System.out.println("Your messenger does not support chatting with yourself");
+//        }
+//        else {System.out.println("My " + phone + " + my messenger can:");
+//        chatWithYourself.chatWithYourself();}
     }
 
     public void addPeopleNearby() {
-        if (chatWithYourself == null) {
-            System.out.println("Your messenger does not support searching contacts nearby");
+        try{
+
+            chatWithYourself.addPeopleNearby();
         }
-        else
-        {System.out.println("My " + phone + " + my messenger can:");
-        chatWithYourself.addPeopleNearby();}
+        catch (Exception e){
+            System.err.println(e.getCause());
+            System.err.println("Your messenger does not support searching contacts nearby");
+        }
+        finally {
+            System.out.println("That's all functionality of your messenger");
+        }
+//        if (chatWithYourself == null) {
+//            System.out.println("Your messenger does not support searching contacts nearby");
+//        }
+//        else
+//        {System.out.println("My " + phone + " + my messenger can:");
+//        chatWithYourself.addPeopleNearby();}
     }
 
     public void audioCall() {
