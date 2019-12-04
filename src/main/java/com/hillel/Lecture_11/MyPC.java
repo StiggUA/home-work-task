@@ -36,31 +36,44 @@ public class MyPC {
         this.messenger = whatsAppWeb;
     }
 
-    public void platform(TelegramDesk telegramDesk) {
+    public String platform(TelegramDesk telegramDesk) {
         System.out.println("The " + Platform.TELEGRAM.name() + " works at: " + Platform.TELEGRAM.getAndroid() + ", " + Platform.TELEGRAM.getIos()
                 + ", " + Platform.TELEGRAM.getDesktop() + ", " + Platform.TELEGRAM.getWeb() + ", " + Platform.TELEGRAM.getWindowsPhone());
         System.out.println("Created by company "  + Platform.TELEGRAM.getMaker());
         System.out.println("Downloaded from " + Platform.TELEGRAM.getUrl());
+        return "The " + Platform.TELEGRAM.name() + " works at: " + Platform.TELEGRAM.getAndroid() + ", " + Platform.TELEGRAM.getIos()
+                + ", " + Platform.TELEGRAM.getDesktop() + ", " + Platform.TELEGRAM.getWeb() + ", " + Platform.TELEGRAM.getWindowsPhone() +
+                ", " + "created by company "  + Platform.TELEGRAM.getMaker() + " downloaded from " + Platform.TELEGRAM.getUrl();
     }
-    public void platform(TelegramWeb telegramWeb) {
+    public String platform(TelegramWeb telegramWeb) {
         System.out.println("The " + Platform.TELEGRAM.name() + " works at: " + Platform.TELEGRAM.getAndroid() + ", " + Platform.TELEGRAM.getIos()
                 + ", " + Platform.TELEGRAM.getDesktop() + ", " + Platform.TELEGRAM.getWeb() + ", " + Platform.TELEGRAM.getWindowsPhone());
         System.out.println("Created by company "  + Platform.TELEGRAM.getMaker());
         System.out.println("Downloaded from " + Platform.TELEGRAM.getUrl());
+        return "The " + Platform.TELEGRAM.name() + " works at: " + Platform.TELEGRAM.getAndroid() + ", " + Platform.TELEGRAM.getIos()
+                + ", " + Platform.TELEGRAM.getDesktop() + ", " + Platform.TELEGRAM.getWeb() + ", " + Platform.TELEGRAM.getWindowsPhone() +
+                ", " + "created by company "  + Platform.TELEGRAM.getMaker() + " downloaded from " + Platform.TELEGRAM.getUrl();
     }
 
-    public void platform(ViberDesktop viberDesktop) {
+    public String platform(ViberDesktop viberDesktop) {
         System.out.println("The " + Platform.VIBER.name() + " works at: " + Platform.VIBER.getAndroid() + ", " + Platform.VIBER.getIos()
                 + ", " + Platform.VIBER.getDesktop() + ", " + Platform.VIBER.getWindowsPhone());
         System.out.println("Created by company "  + Platform.VIBER.getMaker());
         System.out.println("Downloaded from " + Platform.VIBER.getUrl());
+        return "The " + Platform.VIBER.name() + " works at: " + Platform.VIBER.getAndroid() + ", " + Platform.VIBER.getIos()
+                + ", " + Platform.VIBER.getDesktop() + ", " + Platform.VIBER.getWindowsPhone() + " , created by company "  + Platform.VIBER.getMaker() +
+                " downloaded from " + Platform.VIBER.getUrl();
     }
 
-    public void platform(WhatsAppWeb whatsAppWeb) {
+    public String platform(WhatsAppWeb whatsAppWeb) {
         System.out.println("The " + Platform.WHATSAPP.name() + " works at: " + Platform.WHATSAPP.getAndroid() + ", " + Platform.WHATSAPP.getIos()
                 + ", " + Platform.WHATSAPP.getWeb() + ", " + Platform.WHATSAPP.getWindowsPhone());
         System.out.println("Created by company "  + Platform.WHATSAPP.getMaker());
-        System.out.println("Downloaded from " + Platform.WHATSAPP.getUrl());}
+        System.out.println("Downloaded from " + Platform.WHATSAPP.getUrl());
+        return "The " + Platform.WHATSAPP.name() + " works at: " + Platform.WHATSAPP.getAndroid() + ", " + Platform.WHATSAPP.getIos()
+                + ", " + Platform.WHATSAPP.getWeb() + ", " + Platform.WHATSAPP.getWindowsPhone() +
+                " , created by company "  + Platform.WHATSAPP.getMaker() + " download from " + Platform.WHATSAPP.getUrl();
+    }
 
     public void channel(){
         try {
@@ -107,18 +120,14 @@ public class MyPC {
 //        }
 //        else {
 //            videoCall.videoCall();
-//        return videoCall.videoCall();}
-
     }
 
     public String outCall() {
         try{
-            //viberOut.callViberOut();
             return viberOut.callViberOut();
         }
         catch (Exception e){
             System.err.println(e.getCause());
-            //System.err.println("Your messenger does not support calls outside");
             return "Your messenger does not support calls outside";
         }
         finally {
@@ -129,18 +138,18 @@ public class MyPC {
 //        }
 //        else {
 //            //viberOut.callViberOut();
-//            return viberOut.callViberOut();}
     }
 
 
-    public void chatWithYourself() {
+    public String chatWithYourself() {
         try{
-            chatSelfWebDesk.chatWithYourself();
+            return chatSelfWebDesk.chatWithYourself();
         }
         catch (Exception e){
             System.err.println(e.hashCode());
             System.err.println(e.getCause());
             System.err.println("Your messenger does not support chatting with yourself");
+            return "Your messenger does not support chatting with yourself";
         }
 //        if (chatSelfWebDesk == null) {
 //            System.out.println("Your messenger does not support chatting with yourself");

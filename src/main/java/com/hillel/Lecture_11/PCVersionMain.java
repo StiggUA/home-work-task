@@ -2,12 +2,7 @@ package com.hillel.Lecture_11;
 
 public class PCVersionMain {
 
-//    private static Object MyPC;
-//    private static Object TelegramDesk;
-//    private static Object TelegramWeb;
-//    private static Object ViberDesktop;
-
-    public static void main(String[] args) {
+    public static String main(String[] args) {
         TelegramDesk telegramDesk = new TelegramDesk();
         TelegramWeb telegramWeb = new TelegramWeb();
         ViberDesktop viberDesktop = new ViberDesktop();
@@ -41,9 +36,11 @@ public class PCVersionMain {
         catch (MyError error){
             System.err.println("The reason is " + error.getCause() + " error for this pc");
             System.err.println(error.getMessage());
+            return error.getMessage();
         }
         finally {
             System.out.println("Have a nice day!");
+            return "Have a nice day!";
         }
     }
 }

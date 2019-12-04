@@ -11,18 +11,18 @@ public class Viber extends ForViberMob {
     @Override
     public String sendVideo() {
         System.out.println("Sending video file in " + viber);
-        return null;
+        return "Sending video file in " + viber;
     }
 
     @Override
     public String sendPicture() {
         System.out.println("Sharing pictures via " + viber);
-        return null;
+        return "Sharing pictures via " + viber;
     }
     @Override
     public String sendFile() {
         System.out.println("The file was sent by " + viber);
-        return null;
+        return "The file was sent by " + viber;
     }
     @Override
     public void audioCall() {
@@ -32,7 +32,7 @@ public class Viber extends ForViberMob {
     @Override
     public String sendSticker() {
         System.out.println("Adding your own stickers and send via " + viber);
-        return null;
+        return "Adding your own stickers and send via " + viber;
     }
 
     @Override
@@ -46,8 +46,9 @@ public class Viber extends ForViberMob {
     }
 
     @Override
-    public void groupChat() {
+    public String groupChat() {
         System.out.println("Sending a message to a few people in " + viber);
+        return null;
     }
     @Override
     public String messageReceive() {
@@ -55,8 +56,9 @@ public class Viber extends ForViberMob {
         return "You received incoming text message in " + viber;}
 
     @Override
-    public void messageSearch() {
+    public String messageSearch() {
         System.out.println("Searching your chat in " + viber);
+        return null;
     }
 
     @Override
@@ -70,13 +72,15 @@ public class Viber extends ForViberMob {
     }
 
     @Override
-    public void contactImport() {
+    public String contactImport() {
         System.out.println("All contacts in your messenger. " + viber);
+        return null;
     }
 
     @Override
-    public void profileSetting() {
+    public String profileSetting() {
         System.out.println("Set up profile in " + viber);
+        return null;
     }
 
     @Override
@@ -93,12 +97,12 @@ public class Viber extends ForViberMob {
     @Override
     public String callViberOut() {
         System.out.println("Yes, " + viber + " able to call on mobile numbers");
-        return null;
+        return "Yes, " + viber + " able to call on mobile numbers";
     }
 
     @Override
     public String videoCall() {
         System.out.println(viber + " can make a videocall");
-        return null;
+        return viber + " can make a videocall";
     }
 }

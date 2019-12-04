@@ -38,4 +38,13 @@ public class TelegramWebTest {
         String result = myPC.outCall();
         assertEquals(result, "Your messenger does not support calls outside");
     }
+    @Test
+    public void eNum() {
+        TelegramWeb telegramWeb = new TelegramWeb();
+        MyPC myPC = new MyPC(telegramWeb);
+        String result = myPC.platform(telegramWeb);
+        assertEquals(result, "The " + Platform.TELEGRAM.name() + " works at: " + Platform.TELEGRAM.getAndroid() + ", " + Platform.TELEGRAM.getIos()
+                + ", " + Platform.TELEGRAM.getDesktop() + ", " + Platform.TELEGRAM.getWeb() + ", " + Platform.TELEGRAM.getWindowsPhone() +
+                ", " + "created by company "  + Platform.TELEGRAM.getMaker() + " downloaded from " + Platform.TELEGRAM.getUrl());
+    }
 }

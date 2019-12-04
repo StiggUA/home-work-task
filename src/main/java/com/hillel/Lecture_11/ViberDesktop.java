@@ -12,35 +12,37 @@ public class ViberDesktop extends ForViberDesk {
     @Override
     public String sendVideo() {
         System.out.println("I can't take a video, but I can send video files in my " + viberDesk);
-        return null;
+        return "I can't take a video, but I can send video files in my " + viberDesk;
     }
 
     @Override
     public String sendPicture() {
         System.out.println("I can't take a picture, but I can send photos from my " + viberDesk);
-        return null;
+        return "I can't take a picture, but I can send photos from my " + viberDesk;
     }
 
     @Override
     public String sendFile() {
         System.out.println("My " + viberDesk + " allows me to send any files");
-        return null;
+        return "My " + viberDesk + " allows me to send any files";
     }
 
     @Override
     public String sendSticker() {
         System.out.println("Send stickers via " + viberDesk);
+        return "Send stickers via " + viberDesk;
+    }
+
+    @Override
+    public String profileSetting() {
+        System.out.println("Set up my profile in " + viberDesk);
         return null;
     }
 
     @Override
-    public void profileSetting() {
-        System.out.println("Set up my profile in " + viberDesk);
-    }
-
-    @Override
-    public void groupChat() {
+    public String groupChat() {
         System.out.println("Sending a message to a few people in " + viberDesk);
+        return "Sending a message to a few people in " + viberDesk;
     }
 
     @Override
@@ -49,8 +51,9 @@ public class ViberDesktop extends ForViberDesk {
     }
 
     @Override
-    public void messageSearch() {
+    public String messageSearch() {
         System.out.println("Searching your chat in " + viberDesk);
+        return null;
     }
 
     @Override
@@ -66,7 +69,7 @@ public class ViberDesktop extends ForViberDesk {
     @Override
     public String privateChat() {
         System.out.println("Oh yeeeah... It's a secret messages in " + viberDesk);
-        return null;
+        return "Oh yeeeah... It's a secret messages in " + viberDesk;
     }
 
     @Override

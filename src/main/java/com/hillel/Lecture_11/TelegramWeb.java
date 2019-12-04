@@ -34,13 +34,15 @@ public class TelegramWeb extends ForTelegramWeb {
     }
 
     @Override
-    public void profileSetting() {
+    public String profileSetting() {
         System.out.println("Set up my profile in " + telweb);
+        return null;
     }
 
     @Override
-    public void groupChat() {
+    public String groupChat() {
         System.out.println("Sending a message to a few people in " + telweb);
+        return null;
     }
 
     @Override
@@ -49,8 +51,9 @@ public class TelegramWeb extends ForTelegramWeb {
     }
 
     @Override
-    public void messageSearch() {
+    public String messageSearch() {
         System.out.println("Searching your chat in " + telweb);
+        return null;
     }
 
     @Override
@@ -64,7 +67,8 @@ public class TelegramWeb extends ForTelegramWeb {
     }
 
     @Override
-    public void chatWithYourself() {
+    public String chatWithYourself() {
         System.out.println("I can save messages in " + telweb);
+        return null;
     }
 }

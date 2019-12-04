@@ -7,10 +7,10 @@ public interface Messenger {
     String sendFile();
 //    void audioCall();
     String sendSticker();
-    void profileSetting();
-    void groupChat();
+    String profileSetting();
+    String groupChat();
     String messageReceive();
-    void messageSearch();
+    String messageSearch();
     void messageShare();
     void notifications();
 //    void contactImport();

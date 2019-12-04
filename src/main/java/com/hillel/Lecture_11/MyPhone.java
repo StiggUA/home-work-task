@@ -51,28 +51,40 @@ public class MyPhone {
     }
 
 
-    public void platform(Telegram telegram) {
+    public String platform(Telegram telegram) {
         System.out.println("The " + Platform.TELEGRAM.name() + " works at: " + Platform.TELEGRAM.getAndroid() + ", " + Platform.TELEGRAM.getIos()
                 + ", " + Platform.TELEGRAM.getDesktop() + ", " + Platform.TELEGRAM.getWeb() + ", " + Platform.TELEGRAM.getWindowsPhone());
         System.out.println("Created by company "  + Platform.TELEGRAM.getMaker());
         System.out.println("Download from " + App.ANDROID.getsource() + " for Android" +
                 " or from " + App.IOS.getsource() + " for iOS devices");
+        return "The " + Platform.TELEGRAM.name() + " works at: " + Platform.TELEGRAM.getAndroid() + ", " + Platform.TELEGRAM.getIos()
+                + ", " + Platform.TELEGRAM.getDesktop() + ", " + Platform.TELEGRAM.getWeb() + ", " + Platform.TELEGRAM.getWindowsPhone() +
+                ", created by company "  + Platform.TELEGRAM.getMaker() + " download from " + App.ANDROID.getsource() + " for Android" +
+                " or from " + App.IOS.getsource() + " for iOS devices";
     }
 
-    public void platform(Viber viber) {
+    public String platform(Viber viber) {
         System.out.println("The " + Platform.VIBER.name() + " works at: " + Platform.VIBER.getAndroid() + ", " + Platform.VIBER.getIos()
                 + ", " + Platform.VIBER.getDesktop() + ", " + Platform.VIBER.getWindowsPhone());
         System.out.println("Created by company "  + Platform.VIBER.getMaker());
         System.out.println("Download from " + App.ANDROID.getsource() + " for Android" +
                 " or from " + App.IOS.getsource() + " for iOS devices");
+        return "The " + Platform.VIBER.name() + " works at: " + Platform.VIBER.getAndroid() + ", " + Platform.VIBER.getIos()
+                + ", " + Platform.VIBER.getDesktop() + ", " + Platform.VIBER.getWindowsPhone() + " , created by company "  + Platform.VIBER.getMaker() +
+                " downloaded from " + Platform.VIBER.getUrl() + " for Android" +
+                " or from " + App.IOS.getsource() + " for iOS devices";
     }
 
-    public void platform(WhatsApp whats) {
+    public String platform(WhatsApp whats) {
         System.out.println("The " + Platform.WHATSAPP.name() + " works at: " + Platform.WHATSAPP.getAndroid() + ", " + Platform.WHATSAPP.getIos()
                 + ", " + Platform.WHATSAPP.getWeb() + ", " + Platform.WHATSAPP.getWindowsPhone());
         System.out.println("Created by company "  + Platform.WHATSAPP.getMaker());
         System.out.println("Download from " + App.ANDROID.getsource() + " for Android" +
                 " or from " + App.IOS.getsource() + " for iOS devices");
+        return "The " + Platform.WHATSAPP.name() + " works at: " + Platform.WHATSAPP.getAndroid() + ", " + Platform.WHATSAPP.getIos()
+                + ", " + Platform.WHATSAPP.getWeb() + ", " + Platform.WHATSAPP.getWindowsPhone() +
+                " , created by company "  + Platform.WHATSAPP.getMaker() + " download from " + App.ANDROID.getsource() + " for Android" +
+                " or from " + App.IOS.getsource() + " for iOS devices";
     }
 
     public void channel() {
@@ -165,13 +177,14 @@ public class MyPhone {
 
     }
 
-    public void builtBrowser() {
-        try{
-            chatWithYourself.builtInBrowser();
-        }
-        catch (Exception ex){
+    public String builtBrowser() {
+        try {
+            return chatWithYourself.builtInBrowser();
+
+        } catch (Exception ex) {
             System.err.println(ex.getCause());
             System.err.println("Your messenger does not support opening links in messanger");
+            return "Your messenger does not support opening links in messanger";
         }
 //        if (chatWithYourself == null) {
 //            System.out.println("Your messenger does not support opening links in messanger");
@@ -196,14 +209,14 @@ public class MyPhone {
 //        chatWithYourself.chatWithYourself();}
     }
 
-    public void addPeopleNearby() {
+    public String addPeopleNearby() {
         try{
-
-            chatWithYourself.addPeopleNearby();
+            return chatWithYourself.addPeopleNearby();
         }
         catch (Exception e){
             System.err.println(e.getCause());
             System.err.println("Your messenger does not support searching contacts nearby");
+            return "Your messenger does not support searching contacts nearby";
         }
         finally {
             System.out.println("That's all functionality of your messenger");
@@ -214,7 +227,7 @@ public class MyPhone {
 //        else
 //        {System.out.println("My " + phone + " + my messenger can:");
 //        chatWithYourself.addPeopleNearby();}
-    }
+        }
 
     public void audioCall() {
         System.out.println("Looking at my " + phone);

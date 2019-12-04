@@ -7,10 +7,10 @@ public class MessengerMain {
         WhatsApp whatsApp = new WhatsApp();
         OperSystem phoneModels = new OperSystem();
         String phones = "";
-        MyPhone myPhone = new MyPhone("Nokia", viber);
+        MyPhone myPhone = new MyPhone("Nokia", telegram);
         myPhone.platform(whatsApp);
         try {
-            phones = phoneModels.operSystem("iod");
+            phones = phoneModels.operSystem("iys");
             System.out.println(phones + ", Welcome to messenger");
             myPhone.channel();
             myPhone.contactImp();
@@ -43,6 +43,5 @@ public class MessengerMain {
         } finally {
             System.out.println("Hasta la vista, baby");
         }
-
         }
 }

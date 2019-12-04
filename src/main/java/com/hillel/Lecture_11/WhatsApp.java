@@ -47,8 +47,9 @@ public class WhatsApp extends ForWhatsAppMob {
     }
 
     @Override
-    public void groupChat() {
+    public String groupChat() {
         System.out.println("Sending a message to a few people in " + whatsapp);
+        return null;
     }
     @Override
     public String messageReceive() {
@@ -56,8 +57,9 @@ public class WhatsApp extends ForWhatsAppMob {
         return "You received incoming text message in " + whatsapp;}
 
     @Override
-    public void messageSearch() {
+    public String messageSearch() {
         System.out.println("Searching your chat in " + whatsapp);
+        return null;
     }
 
     @Override
@@ -71,13 +73,15 @@ public class WhatsApp extends ForWhatsAppMob {
     }
 
     @Override
-    public void contactImport() {
+    public String contactImport() {
         System.out.println("All contacts in your messenger. " + whatsapp);
+        return "All contacts in your messenger. " + whatsapp;
     }
 
     @Override
-    public void profileSetting() {
+    public String profileSetting() {
         System.out.println("Set up profile in " + whatsapp);
+        return "Set up profile in " + whatsapp;
     }
 
     @Override

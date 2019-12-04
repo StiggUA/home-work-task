@@ -18,7 +18,7 @@ public class Telegram extends ForTelegramMob {
     @Override
     public String builtInBrowser() {
         System.out.println(telega + "opens webpages in builtin browser");
-        return telega + "opens webpages in builtin browser";
+        return telega + " opens webpages in builtin browser";
     }
 
     @Override
@@ -67,8 +67,9 @@ public class Telegram extends ForTelegramMob {
     }
 
     @Override
-    public void groupChat() {
+    public String groupChat() {
         System.out.println("Sending a message to a few people in " + telega);
+        return null;
     }
 
     @Override
@@ -78,8 +79,9 @@ public class Telegram extends ForTelegramMob {
     }
 
     @Override
-    public void messageSearch() {
+    public String messageSearch() {
         System.out.println("Searching your chat in " + telega);
+        return null;
     }
 
     @Override
@@ -93,13 +95,15 @@ public class Telegram extends ForTelegramMob {
     }
 
     @Override
-    public void contactImport() {
+    public String contactImport() {
         System.out.println("All contacts in your messanger. " + telega);
+        return null;
     }
 
     @Override
-    public void profileSetting() {
+    public String profileSetting() {
         System.out.println("Set up profile in " + telega);
+        return null;
     }
 
     @Override
