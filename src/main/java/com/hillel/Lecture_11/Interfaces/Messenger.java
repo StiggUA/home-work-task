@@ -2,11 +2,11 @@ package com.hillel.Lecture_11.Interfaces;
 
 public interface Messenger {
     String sendTextMessage();
-    void sendVideo();
+    String sendVideo();
     String sendPicture();
-    void sendFile();
+    String sendFile();
 //    void audioCall();
-    void sendSticker();
+    String sendSticker();
     void profileSetting();
     void groupChat();
     String messageReceive();

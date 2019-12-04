@@ -10,8 +10,9 @@ public class WhatsApp extends ForWhatsAppMob {
     }
 
     @Override
-    public void sendVideo() {
+    public String sendVideo() {
         System.out.println("Sending video file in " + whatsapp);
+        return null;
     }
 
     @Override
@@ -20,8 +21,9 @@ public class WhatsApp extends ForWhatsAppMob {
         return null;
     }
     @Override
-    public void sendFile() {
+    public String sendFile() {
         System.out.println("The file was sent by " + whatsapp);
+        return null;
     }
 
     @Override
@@ -29,8 +31,9 @@ public class WhatsApp extends ForWhatsAppMob {
         System.out.println("Hi! A call you via " + whatsapp + ". Nice to hear you");
     }
     @Override
-    public void sendSticker() {
+    public String sendSticker() {
         System.out.println("Adding your own stickers and send via " + whatsapp);
+        return null;
     }
 
     @Override

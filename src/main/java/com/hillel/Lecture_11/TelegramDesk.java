@@ -10,8 +10,9 @@ public class TelegramDesk extends ForTelegramDesk {
     }
 
     @Override
-    public void sendVideo() {
+    public String sendVideo() {
         System.out.println("I can't take a video, but I can send video files in my " + telDesk);
+        return "I can't take a video, but I can send video files in my " + telDesk;
     }
 
     @Override
@@ -21,13 +22,15 @@ public class TelegramDesk extends ForTelegramDesk {
     }
 
     @Override
-    public void sendFile() {
+    public String sendFile() {
         System.out.println("My " + telDesk + " allows me to send any files");
+        return "My " + telDesk + " allows me to send any files";
     }
 
     @Override
-    public void sendSticker() {
+    public String sendSticker() {
         System.out.println("Send stickers via " + telDesk);
+        return "Send stickers via " + telDesk;
     }
 
     @Override
@@ -63,7 +66,7 @@ public class TelegramDesk extends ForTelegramDesk {
     @Override
     public String privateChat() {
         System.out.println("Oh yeeeah... It's a secret messages in " + telDesk);
-        return null;
+        return "Oh yeeeah... It's a secret messages in " + telDesk;
     }
 
     @Override

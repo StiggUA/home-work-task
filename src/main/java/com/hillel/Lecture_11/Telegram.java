@@ -28,8 +28,9 @@ public class Telegram extends ForTelegramMob {
     }
 
     @Override
-    public void sendVideo() {
+    public String sendVideo() {
         System.out.println("Sending video file in " + telega);
+        return null;
     }
 
     @Override
@@ -39,8 +40,9 @@ public class Telegram extends ForTelegramMob {
     }
 
     @Override
-    public void sendFile() {
+    public String sendFile() {
         System.out.println("The file was sent by " + telega);
+        return null;
     }
 
     @Override
@@ -49,8 +51,9 @@ public class Telegram extends ForTelegramMob {
     }
 
     @Override
-    public void sendSticker() {
+    public String sendSticker() {
         System.out.println("Adding your own stickers and send via " + telega);
+        return null;
     }
 
     @Override

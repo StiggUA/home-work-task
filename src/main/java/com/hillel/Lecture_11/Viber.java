@@ -9,8 +9,9 @@ public class Viber extends ForViberMob {
         return "Send messages to all contacts using " + viber;}
 
     @Override
-    public void sendVideo() {
+    public String sendVideo() {
         System.out.println("Sending video file in " + viber);
+        return null;
     }
 
     @Override
@@ -19,8 +20,9 @@ public class Viber extends ForViberMob {
         return null;
     }
     @Override
-    public void sendFile() {
+    public String sendFile() {
         System.out.println("The file was sent by " + viber);
+        return null;
     }
     @Override
     public void audioCall() {
@@ -28,8 +30,9 @@ public class Viber extends ForViberMob {
     }
 
     @Override
-    public void sendSticker() {
+    public String sendSticker() {
         System.out.println("Adding your own stickers and send via " + viber);
+        return null;
     }
 
     @Override

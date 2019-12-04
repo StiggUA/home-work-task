@@ -10,8 +10,9 @@ public class WhatsAppWeb extends ForWhatsAppWeb {
     }
 
     @Override
-    public void sendVideo() {
+    public String sendVideo() {
         System.out.println("I can't take a video, but I can send video files in my " + whatWeb);
+        return null;
     }
 
     @Override
@@ -21,13 +22,15 @@ public class WhatsAppWeb extends ForWhatsAppWeb {
     }
 
     @Override
-    public void sendFile() {
+    public String sendFile() {
         System.out.println("My " + whatWeb + " allows me to send any files");
+        return null;
     }
 
     @Override
-    public void sendSticker() {
+    public String sendSticker() {
         System.out.println("Send stickers via " + whatWeb);
+        return null;
     }
 
     @Override
