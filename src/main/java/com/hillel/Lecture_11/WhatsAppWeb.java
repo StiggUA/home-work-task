@@ -15,8 +15,9 @@ public class WhatsAppWeb extends ForWhatsAppWeb {
     }
 
     @Override
-    public void sendPicture() {
+    public String sendPicture() {
         System.out.println("I can't take a picture, but I can send photos from my " + whatWeb);
+        return null;
     }
 
     @Override

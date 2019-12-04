@@ -15,8 +15,9 @@ public class TelegramDesk extends ForTelegramDesk {
     }
 
     @Override
-    public void sendPicture() {
+    public String sendPicture() {
         System.out.println("I can't take a picture, but I can send photos from my " + telDesk);
+        return null;
     }
 
     @Override
@@ -60,8 +61,9 @@ public class TelegramDesk extends ForTelegramDesk {
     }
 
     @Override
-    public void privateChat() {
+    public String privateChat() {
         System.out.println("Oh yeeeah... It's a secret messages in " + telDesk);
+        return null;
     }
 
     @Override

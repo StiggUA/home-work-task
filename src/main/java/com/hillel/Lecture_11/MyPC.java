@@ -91,38 +91,45 @@ public class MyPC {
 //            specialChat.privateChat();
 //        }
     }
-    public void videoCalling() {
+    public String videoCalling() {
         try{
-            videoCall.videoCall();
+            return videoCall.videoCall();
         }
         catch (Exception e){
             System.err.println(e.getMessage());
             System.err.println("No video calls in your messenger");
+            return "No video calls in your messenger";
         }
-
+//
 //        if (videoCall == null) {
 //            System.out.println("Your messenger does not support videocalls");
+//            return "Your messenger does not support videocalls";
 //        }
 //        else {
-//            videoCall.videoCall();}
+//            videoCall.videoCall();
+//        return videoCall.videoCall();}
+
     }
 
-    public void outCall() {
+    public String outCall() {
         try{
-            viberOut.callViberOut();
+            //viberOut.callViberOut();
+            return viberOut.callViberOut();
         }
         catch (Exception e){
             System.err.println(e.getCause());
-            System.err.println("Your messenger does not support calls outside");
+            //System.err.println("Your messenger does not support calls outside");
+            return "Your messenger does not support calls outside";
         }
         finally {
             System.out.println("All benefits of your messenger are listed above");
         }
 //        if (viberOut == null) {
-//            System.out.println("Your messenger does not support calls outside");
+//            return "Your messenger does not support calls outside";
 //        }
 //        else {
-//            viberOut.callViberOut();}
+//            //viberOut.callViberOut();
+//            return viberOut.callViberOut();}
     }
 
 

@@ -14,11 +14,11 @@ public class PCVersionMain {
         WhatsAppWeb whatsAppWeb = new WhatsAppWeb();
         PcOS pcOS = new PcOS();
         String pc = "";
-        MyPC myPC = new MyPC(telegramWeb);
-        myPC.platform(whatsAppWeb);
+        MyPC myPC = new MyPC(viberDesktop);
+        myPC.platform(viberDesktop);
 
         try{
-            pc = pcOS.pcOS("macs");
+            pc = pcOS.pcOS("mac");
             System.out.println(pc + ", Welcome to messenger");
             myPC.audioCall();
             myPC.channel();

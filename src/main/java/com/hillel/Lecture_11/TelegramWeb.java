@@ -15,8 +15,9 @@ public class TelegramWeb extends ForTelegramWeb {
     }
 
     @Override
-    public void sendPicture() {
+    public String sendPicture() {
         System.out.println("I can't take a picture, but I can send photos from my " + telweb);
+        return "I can't take a picture, but I can send photos from my " + telweb;
     }
 
     @Override

@@ -3,7 +3,7 @@ package com.hillel.Lecture_11.Interfaces;
 public interface Messenger {
     String sendTextMessage();
     void sendVideo();
-    void sendPicture();
+    String sendPicture();
     void sendFile();
 //    void audioCall();
     void sendSticker();

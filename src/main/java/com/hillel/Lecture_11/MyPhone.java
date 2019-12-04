@@ -49,6 +49,8 @@ public class MyPhone {
         this.whatsApp = whatsApp;
         this.mobileVersion = whatsApp;
     }
+
+
     public void platform(Telegram telegram) {
         System.out.println("The " + Platform.TELEGRAM.name() + " works at: " + Platform.TELEGRAM.getAndroid() + ", " + Platform.TELEGRAM.getIos()
                 + ", " + Platform.TELEGRAM.getDesktop() + ", " + Platform.TELEGRAM.getWeb() + ", " + Platform.TELEGRAM.getWindowsPhone());
@@ -126,7 +128,7 @@ public class MyPhone {
 //        videoCall.videoCall();}
     }
 
-    public void outCall() {
+    public String outCall() {
         try{
             viberOut.callViberOut();
         }
@@ -136,14 +138,16 @@ public class MyPhone {
             System.err.println(e.getStackTrace());
             System.err.println("Your messenger does not support calls outside");
         }
-//        if (viberOut == null) {
-//            System.out.println("Your messenger does not support calls outside");
-//        }
-//        else {System.out.println("My " + phone + " + my messenger can:");
-//        viberOut.callViberOut();}
+        if (viberOut == null) {
+            System.out.println("Your messenger does not support calls outside");
+            return "Your messenger does not support calls outside";
+        }
+        else {System.out.println("My " + phone + " + my messenger can:");
+        viberOut.callViberOut();
+        return "My " + phone + " + my messenger can:";}
     }
 
-    public void status() {
+    public String status() {
         try {
             whatsApp.myStatus();
         }
@@ -151,12 +155,14 @@ public class MyPhone {
             System.err.println(e.getCause());
             System.err.println("Your messenger does not support status setup");
         }
-//        if (messanger == whatsApp) {
-//            System.out.println("My " + phone + " + my messenger can:");
-//            whatsApp.myStatus();
-//        } else {
-//            System.out.println("Your messenger does not support status setup");
-//        }
+        if (messanger == whatsApp) {
+            System.out.println("My " + phone + " + my messenger can:");
+            whatsApp.myStatus();
+            return "My " + phone + " + my messenger can:";
+        } else {
+            return "Your messenger does not support status setup";
+        }
+
     }
 
     public void builtBrowser() {

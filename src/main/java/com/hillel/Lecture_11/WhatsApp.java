@@ -15,8 +15,9 @@ public class WhatsApp extends ForWhatsAppMob {
     }
 
     @Override
-    public void sendPicture() {
+    public String sendPicture() {
         System.out.println("Sharing pictures via " + whatsapp);
+        return null;
     }
     @Override
     public void sendFile() {
@@ -82,7 +83,8 @@ public class WhatsApp extends ForWhatsAppMob {
         return "You can create your status using " + whatsapp;}
 
     @Override
-    public void videoCall() {
+    public String videoCall() {
         System.out.println(whatsapp + " can make a videocall");
+        return null;
     }
 }

@@ -1,6 +1,6 @@
 package com.hillel.Lecture_11.Interfaces;
 
 public interface VideoCall {
-    void videoCall();
+    String videoCall();
     //viber and wahtsapp
 }

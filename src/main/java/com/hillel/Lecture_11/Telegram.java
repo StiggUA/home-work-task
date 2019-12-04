@@ -4,18 +4,21 @@ import com.hillel.Lecture_11.AbstractClasses.ForTelegramMob;
 
 public class Telegram extends ForTelegramMob {
     @Override
-    public void chatWithYourself() {
+    public String chatWithYourself() {
         System.out.println("In " + telega + " I can send messages to myself ");
+        return "In " + telega + " I can send messages to myself";
     }
 
     @Override
-    public void addPeopleNearby() {
+    public String addPeopleNearby() {
         System.out.println("Searching people near you in contacts. Your " + telega);
+        return "Searching people near you in contacts. Your " + telega;
     }
 
     @Override
-    public void builtInBrowser() {
+    public String builtInBrowser() {
         System.out.println(telega + "opens webpages in builtin browser");
+        return telega + "opens webpages in builtin browser";
     }
 
     @Override
@@ -30,8 +33,9 @@ public class Telegram extends ForTelegramMob {
     }
 
     @Override
-    public void sendPicture() {
+    public String sendPicture() {
         System.out.println("Sharing pictures via " + telega);
+        return null;
     }
 
     @Override
@@ -96,8 +100,9 @@ public class Telegram extends ForTelegramMob {
     }
 
     @Override
-    public void privateChat() {
+    public String privateChat() {
         System.out.println("Oh yeeeah... It's a secret messages in " + telega);
+        return "Oh yeeeah... It's a secret messages in " + telega;
     }
 
     @Override

@@ -14,8 +14,9 @@ public class Viber extends ForViberMob {
     }
 
     @Override
-    public void sendPicture() {
+    public String sendPicture() {
         System.out.println("Sharing pictures via " + viber);
+        return null;
     }
     @Override
     public void sendFile() {
@@ -76,8 +77,9 @@ public class Viber extends ForViberMob {
     }
 
     @Override
-    public void privateChat() {
+    public String privateChat() {
         System.out.println("Oh yeeeah... It's a secret messages in " + viber);
+        return null;
     }
 
     @Override
@@ -86,12 +88,14 @@ public class Viber extends ForViberMob {
     }
 
     @Override
-    public void callViberOut() {
+    public String callViberOut() {
         System.out.println("Yes, " + viber + " able to call on mobile numbers");
+        return null;
     }
 
     @Override
-    public void videoCall() {
+    public String videoCall() {
         System.out.println(viber + " can make a videocall");
+        return null;
     }
 }
