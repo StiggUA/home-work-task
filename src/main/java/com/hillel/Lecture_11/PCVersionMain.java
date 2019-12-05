@@ -12,7 +12,7 @@ public class PCVersionMain {
         myPC.platform(telegramDesk);
 
         try{
-            pc = pcOS.pcOS("moc");
+            pc = pcOS.pcOS("mac");
             System.out.println(pc + ", Welcome to messenger");
             myPC.audioCall();
             myPC.channel();
@@ -32,7 +32,7 @@ public class PCVersionMain {
             myPC.videoCalling();
             myPC.outCall();
         }
-        catch (MyError error){
+        catch (IncorrectOs error){
             System.err.println("The reason is " + error.getCause() + " error for this pc");
             System.err.println(error.getMessage());
         }

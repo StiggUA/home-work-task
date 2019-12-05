@@ -36,7 +36,7 @@ public class MessengerMain {
             myPhone.messageReceive();
             myPhone.addPeopleNearby();
             myPhone.status();
-        } catch (MyError error) {
+        } catch (IncorrectOs error) {
             error.getCause();
             System.err.println(error.getMessage());
             System.err.println("Buy another phone. Good bye!");
