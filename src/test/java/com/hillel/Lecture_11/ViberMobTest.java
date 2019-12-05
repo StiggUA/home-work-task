@@ -1,7 +1,7 @@
 package com.hillel.Lecture_11;
 import com.hillel.Lecture_11.Interfaces.Messenger;
 import org.testng.annotations.Test;
-import static com.hillel.Lecture_11.Interfaces.Messenger.*;
+
 import static junit.framework.Assert.assertEquals;
 
 public class ViberMobTest {
@@ -49,5 +49,12 @@ public class ViberMobTest {
                 + ", " + Platform.VIBER.getDesktop() + ", " + Platform.VIBER.getWindowsPhone() + " , created by company "  + Platform.VIBER.getMaker() +
                 " downloaded from " + Platform.VIBER.getUrl() + " for Android" +
                 " or from " + App.IOS.getsource() + " for iOS devices");
+    }
+    @Test
+    public void errorTest() {
+        OperSystem operSystem = new OperSystem();
+        String os = operSystem.operSystem("Windows Phone");
+        String result = operSystem.operSystem(os);
+        assertEquals(result, operSystem.operSystem(os));
     }
 }

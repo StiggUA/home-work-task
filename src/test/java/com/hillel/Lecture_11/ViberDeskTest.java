@@ -39,4 +39,11 @@ public class ViberDeskTest {
                 + ", " + Platform.VIBER.getDesktop() + ", " + Platform.VIBER.getWindowsPhone() + " , created by company "  + Platform.VIBER.getMaker() +
                 " downloaded from " + Platform.VIBER.getUrl());
     }
+    @Test
+    public void errorTest() {
+        PcOS pcOS = new PcOS();
+        String os = pcOS.pcOS("Linux");
+        String result = pcOS.pcOS(os);
+        assertEquals(result, pcOS.pcOS(os));
+    }
 }

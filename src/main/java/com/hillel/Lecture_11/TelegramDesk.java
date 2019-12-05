@@ -18,7 +18,7 @@ public class TelegramDesk extends ForTelegramDesk {
     @Override
     public String sendPicture() {
         System.out.println("I can't take a picture, but I can send photos from my " + telDesk);
-        return null;
+        return "I can't take a picture, but I can send photos from my " + telDesk;
     }
 
     @Override
@@ -36,13 +36,13 @@ public class TelegramDesk extends ForTelegramDesk {
     @Override
     public String profileSetting() {
         System.out.println("Set up my profile in " + telDesk);
-        return null;
+        return "Set up my profile in " + telDesk;
     }
 
     @Override
     public String groupChat() {
         System.out.println("Sending a message to a few people in " + telDesk);
-        return null;
+        return "Sending a message to a few people in " + telDesk;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class TelegramDesk extends ForTelegramDesk {
     @Override
     public String messageSearch() {
         System.out.println("Searching your chat in " + telDesk);
-        return null;
+        return "Searching your chat in " + telDesk;
     }
 
     @Override
@@ -85,6 +85,6 @@ public class TelegramDesk extends ForTelegramDesk {
     @Override
     public String chatWithYourself() {
         System.out.println("I can save messages in " + telDesk);
-        return null;
+        return "I can save messages in " + telDesk;
     }
 }

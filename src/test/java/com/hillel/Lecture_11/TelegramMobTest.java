@@ -59,4 +59,11 @@ public class TelegramMobTest {
                 ", created by company "  + Platform.TELEGRAM.getMaker() + " download from " + App.ANDROID.getsource() + " for Android" +
                 " or from " + App.IOS.getsource() + " for iOS devices");
     }
+    @Test
+    public void errorTest() {
+        OperSystem operSystem = new OperSystem();
+        String os = operSystem.operSystem("iOS");
+        String result = operSystem.operSystem(os);
+        assertEquals(result, operSystem.operSystem(os));
+    }
 }

@@ -1,19 +1,18 @@
 package com.hillel.Lecture_11;
 
 public class PCVersionMain {
-
-    public static String main(String[] args) {
+    public static void main(String[] args) {
         TelegramDesk telegramDesk = new TelegramDesk();
         TelegramWeb telegramWeb = new TelegramWeb();
         ViberDesktop viberDesktop = new ViberDesktop();
         WhatsAppWeb whatsAppWeb = new WhatsAppWeb();
         PcOS pcOS = new PcOS();
         String pc = "";
-        MyPC myPC = new MyPC(viberDesktop);
-        myPC.platform(viberDesktop);
+        MyPC myPC = new MyPC(telegramDesk);
+        myPC.platform(telegramDesk);
 
         try{
-            pc = pcOS.pcOS("mac");
+            pc = pcOS.pcOS("moc");
             System.out.println(pc + ", Welcome to messenger");
             myPC.audioCall();
             myPC.channel();
@@ -36,13 +35,10 @@ public class PCVersionMain {
         catch (MyError error){
             System.err.println("The reason is " + error.getCause() + " error for this pc");
             System.err.println(error.getMessage());
-            return error.getMessage();
         }
         finally {
             System.out.println("Have a nice day!");
-            return "Have a nice day!";
         }
     }
 }
-
 

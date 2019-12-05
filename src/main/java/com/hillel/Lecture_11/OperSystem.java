@@ -7,6 +7,9 @@ public class OperSystem {
             if (phones.equalsIgnoreCase(operSystem)){
                 return phones;
             }
+//            else if (phones != operSystem(phones)){
+//                return "Your operation system " + operSystem + " does not support this messenger.";
+//            }
         }
         throw new MyError ("Your operation system " + operSystem + " does not support this messenger.");
     }

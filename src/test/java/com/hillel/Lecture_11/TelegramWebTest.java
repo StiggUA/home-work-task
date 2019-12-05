@@ -47,4 +47,11 @@ public class TelegramWebTest {
                 + ", " + Platform.TELEGRAM.getDesktop() + ", " + Platform.TELEGRAM.getWeb() + ", " + Platform.TELEGRAM.getWindowsPhone() +
                 ", " + "created by company "  + Platform.TELEGRAM.getMaker() + " downloaded from " + Platform.TELEGRAM.getUrl());
     }
+    @Test
+    public void errorTest() {
+        PcOS pcOS = new PcOS();
+        String os = pcOS.pcOS("windows");
+        String result = pcOS.pcOS(os);
+        assertEquals(result, pcOS.pcOS(os));
+    }
 }

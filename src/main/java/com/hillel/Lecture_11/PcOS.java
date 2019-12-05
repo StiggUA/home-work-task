@@ -7,6 +7,9 @@ public class PcOS {
             if (systems.equalsIgnoreCase(pcOs)){
                 return systems;
             }
+//            else if (systems != pcOS(systems)) {
+//                return "You can't use this messenger on " + pcOs + ".";
+//            }
         }
         throw new MyError ("You can't use this messenger on " + pcOs + ".");
     }

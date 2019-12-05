@@ -40,4 +40,12 @@ public class WhatsAppMobTest {
                 " , created by company "  + Platform.WHATSAPP.getMaker() + " download from " + App.ANDROID.getsource() + " for Android" +
                 " or from " + App.IOS.getsource() + " for iOS devices");
     }
+    @Test
+    public void errorTest() {
+        OperSystem operSystem = new OperSystem();
+        String os = operSystem.operSystem("Android");
+        String result = operSystem.operSystem(os);
+        assertEquals(result, operSystem.operSystem(os));
+    }
 }
+

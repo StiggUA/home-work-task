@@ -40,4 +40,11 @@ public class WhaysAppWeb {
                 + ", " + Platform.WHATSAPP.getWeb() + ", " + Platform.WHATSAPP.getWindowsPhone() +
                 " , created by company "  + Platform.WHATSAPP.getMaker() + " download from " + Platform.WHATSAPP.getUrl());
     }
+    @Test
+    public void errorTest() {
+        PcOS pcOS = new PcOS();
+        String os = pcOS.pcOS("Mac");
+        String result = pcOS.pcOS(os);
+        assertEquals(result, pcOS.pcOS(os));
+    }
 }
