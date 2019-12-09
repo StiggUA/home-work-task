@@ -12,7 +12,7 @@ public class ArraysChecker {
     public List<String> getReversList(List<String> list) {
 //        TODO implements result
         //List<String> data = Arrays.asList("one", "two", "three", "four", "five");
-      // Collections.reverse(list);
+        // Collections.reverse(list);
         List reverse = new ArrayList();
         for (int i = list.size() - 1; i >= 0; i--) {
             reverse.add(list.get(i));
@@ -29,7 +29,7 @@ public class ArraysChecker {
                 result = s;
             }
         }
-            return result;
+        return result;
     }
 
 
@@ -42,12 +42,6 @@ public class ArraysChecker {
 
     public List<String> removeDuplicates(List<String> list) {
 //        TODO implements result
-//        Set<String> set = new HashSet<>(list);
-//        list.clear();
-//        list.addAll(set);
-//        list = new ArrayList<>(set);
-        //List<String> dups = list.stream().distinct().collect(Collectors.toList());
-        //list = dups;
         List dups = new ArrayList(list);
         for (int i = 0; i < list.size(); i++) {
             for (int j = dups.size() - 1; j > i; j--) {
@@ -62,8 +56,15 @@ public class ArraysChecker {
 
     public List<String> sortList(List<String> list) {
 //        TODO implements result
-        list.sort(String::lastIndexOf);
+//        list.sort(String::lastIndexOf);
+        for (int i = 0; i < list.size()-1; i++) {
+            if (list.get(i).length() > list.get(i + 1).length()) {
+                String res = list.get(i);
+                list.set(i, list.get(i + 1));
+                list.set(i + 1, res);
 
+            }
+        }
         return list;
     }
 }
