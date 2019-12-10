@@ -27,9 +27,15 @@ public class Address {
     @Override
     public String toString() {
         return "\"address\":{" +
-                "\"city\":" + "\"New-York" + '\"' +
-                ",\"street\":" + "\"Brooklyn 75" + "\"},";
+                "\"city\":" + "\"" + city + '\"' +
+                ",\"street\":" + "\"" + street + "\"},";
     }
+    //    @Override
+//    public String toString() {
+////        return "\"address\":{" +
+////                "\"city\":" + "\"New-York" + '\"' +
+////                ",\"street\":" + "\"Brooklyn 75" + "\"},";
+//    }
 }
 
 //    "address":{"city":"New-York","street":"Brooklyn 75"},

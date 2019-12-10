@@ -1,9 +1,6 @@
 package com.hillel.lecture_14;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Create json converter. User object should be present in key-value pair, all field should be like Map;
@@ -24,74 +21,61 @@ public class JsonConverter {
 
 //        TODO implements result
         String result = "";
-
         return result;
     }
 
     public String convertToJsonString(User users) {
         Address address = new Address();
+        Friend friend = new Friend();
+        address.setCity("New-York");
+        address.setStreet("Brooklyn 75");
+
+        users.setId(5);
+        users.setFirstName("Steve");
+        users.setLastName("Rogers");
+        users.setAge(99);
+        users.setGender("male");
+        users.setCompany("Avengers");
+        users.setEmail("steve@avengers.com");
+        users.setPhone(Arrays.asList("\"+19-123-136-35-48\",\"+19-916-812-99-00\""));
+        users.setAddress(address);
+        users.setFriends(Arrays.asList(friend));
+
 
 //        TODO implements result
         String result = "";
         String start = "\"{";
-        String finish = "\"}";
+        String finish = "]}\"";
         String quotes = "\"";
-        String list1Start = "\":[\"";
-        String list1Finish = "\"],";
-//        String comma = ",";
-//        String addressStart = "\":{\"";
-//        String addressFinish = "\"},";
+//        String list1Start = "\":[\"";
+//        String list1Finish = "\"],";
+
         Map<String, String> userMap = new HashMap<>();
-        userMap.put("id", String.valueOf(5));
-        userMap.put("firstName", "Steve");
-        userMap.put("lastName", "Rogers");
+        userMap.put("id", String.valueOf(users.getId()));
+        userMap.put("firstName", users.getFirstName());
+        userMap.put("lastName", users.getLastName());
         userMap.put("age", String.valueOf(99));
-        userMap.put("gender", "male");
-        userMap.put("company", "Avengers");
-        userMap.put("email", "steve @avengers.com");
-        userMap.put("phone", "+19-123-136-35-48\",\"+19-916-812-99-00");
-        userMap.put("address","");
-//
-//        Map<String, String> address1 = new HashMap<>();
-//        String addressStart = "\":{\"";
-//        String addressFinish = "\"},";
-//        address1.put("city", "New-York");
-//        address1.put("street", "Brooklyn 75");
+        userMap.put("gender", users.getGender());
+        userMap.put("company", users.getCompany());
+        userMap.put("email", users.getEmail());
+        userMap.put("phone", String.valueOf(users.getPhone()));
+        userMap.put("address", String.valueOf(users.getAddress()));
+        userMap.put("friends", String.valueOf(friend.toString()));
 
         Set<Map.Entry<String, String>> entries = userMap.entrySet();
         for (Map.Entry<String, String> entry : entries) {
-            String row = quotes + entry.getKey() + quotes + ":" + quotes + entry.getValue() + quotes + ",";
+            String json = quotes + entry.getKey() + quotes + ":" + quotes + entry.getValue() + quotes + ",";
             if (entry.getKey().equalsIgnoreCase("phone")) {
-                row = quotes + entry.getKey() + list1Start + entry.getValue() + list1Finish;
+                json = quotes + entry.getKey() + quotes + ":"  + entry.getValue() + ",";
             }
             if (entry.getKey().equalsIgnoreCase("address")){
-                row = address.toString();
+                json = entry.getValue();
             }
-//            Map<String, String> address = new HashMap<>();
-//            String addressStart = "\":{\"";
-//            String addressFinish = "\"},";
-//            address.put("address", "");
-//            address.put("city", "New-York");
-//            address.put("street", "Brooklyn 75");
-//            Set<Map.Entry<String, String>> entries1 = userMap.entrySet();
-//            for (Map.Entry<String, String> entry1 : entries) {
-//                row = quotes + entry.getKey() + quotes + ":" + quotes + entry.getValue() + quotes + ",";
-//                if (entry.getKey().equalsIgnoreCase("address")) {
-//                    row = entry1.getKey() + addressStart;
-//                }
-//            }
-            result += row;
+            if (entry.getKey().equalsIgnoreCase("friends")){
+                json = entry.getValue();
+            }
+            result += json;
         }
         return start + result + finish;
     }
 }
-//            if (entry.getKey().equalsIgnoreCase("address")) {
-//                Map<String, String> address = new HashMap<>();
-//                //address.put("address", "");
-//                address.put("city", "New-York");
-//                address.put("street", "Brooklyn 75");
-//                row = quotes + entry.getKey() + addressStart + entry.getValue() + entry.getValue();
-//            }
-//            if (entry.getKey().equalsIgnoreCase("street")) {
-//                row = quotes + entry.getKey() + quotes + ":" + quotes + entry.getValue() + addressFinish;
-//            }
