@@ -23,4 +23,13 @@ public class Address {
     public void setStreet(String street) {
         this.street = street;
     }
+
+    @Override
+    public String toString() {
+        return "\"address\":{" +
+                "\"city\":" + "\"New-York" + '\"' +
+                ",\"street\":" + "\"Brooklyn 75" + "\"},";
+    }
 }
+
+//    "address":{"city":"New-York","street":"Brooklyn 75"},

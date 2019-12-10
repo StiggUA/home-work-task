@@ -29,6 +29,7 @@ public class JsonConverter {
     }
 
     public String convertToJsonString(User users) {
+        Address address = new Address();
 
 //        TODO implements result
         String result = "";
@@ -49,12 +50,22 @@ public class JsonConverter {
         userMap.put("company", "Avengers");
         userMap.put("email", "steve @avengers.com");
         userMap.put("phone", "+19-123-136-35-48\",\"+19-916-812-99-00");
+        userMap.put("address","");
+//
+//        Map<String, String> address1 = new HashMap<>();
+//        String addressStart = "\":{\"";
+//        String addressFinish = "\"},";
+//        address1.put("city", "New-York");
+//        address1.put("street", "Brooklyn 75");
 
         Set<Map.Entry<String, String>> entries = userMap.entrySet();
         for (Map.Entry<String, String> entry : entries) {
             String row = quotes + entry.getKey() + quotes + ":" + quotes + entry.getValue() + quotes + ",";
             if (entry.getKey().equalsIgnoreCase("phone")) {
                 row = quotes + entry.getKey() + list1Start + entry.getValue() + list1Finish;
+            }
+            if (entry.getKey().equalsIgnoreCase("address")){
+                row = address.toString();
             }
 //            Map<String, String> address = new HashMap<>();
 //            String addressStart = "\":{\"";
