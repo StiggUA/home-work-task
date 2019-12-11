@@ -101,17 +101,15 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                ", company='" + company + '\'' +
-                ", email='" + email + '\'' +
-                ", phone=" + phone +
-                ", address=" + address +
-                ", friends=" + friends +
-                '}';
+        return  "\"id\":" + id +
+                ", \"firstName\":" + "\"" + firstName + "\"" +
+                ", \"lastName\":" + "\"" + lastName + "\"" +
+                ", \"age\":" + age +
+                ", \"gender\":" + "\"" + gender + "\"" +
+                ", \"company\":" + "\"" + company + "\"" +
+                ", \"email\":" + "\"" + email + "\"" +
+                ", \"phone\":" + phone + "\"" +
+                ", \"address\":" + address + "\"" +
+                ", \"friends\":" + friends ;
     }
 }

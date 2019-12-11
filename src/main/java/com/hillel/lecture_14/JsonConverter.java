@@ -19,7 +19,6 @@ public class JsonConverter {
 
 
     public String convertToJsonString(List<User> users) {
-
 //        TODO implements result
         String result = "";
         String quotes = "\"";
@@ -132,13 +131,12 @@ public class JsonConverter {
         steveRogers.setCompany("Avengers");
         steveRogers.setEmail("steve@avengers.com");
 
-        List<String> stevePhones = Arrays.asList("\"+19-123-136-35-48\"","\"+19-916-812-99-00\"");
+        List<String> stevePhones = Arrays.asList("\"+19-123-136-35-48\"", "\"+19-916-812-99-00\"");
         steveRogers.setPhone(stevePhones);
 
         Address steveAddress = new Address();
         steveAddress.setCity("New-York");
         steveAddress.setStreet("Brooklyn 75");
-
         steveRogers.setAddress(steveAddress);
 
         Friend tonyStark = new Friend();
@@ -163,7 +161,7 @@ public class JsonConverter {
         String finish = "}\"";
         String quotes = "\"";
 
-        Map<String, String> userMap = new HashMap<>();
+        Map<String, String> userMap = new LinkedHashMap<>();
         userMap.put("id", String.valueOf(steveRogers.getId()));
         userMap.put("firstName", steveRogers.getFirstName());
         userMap.put("lastName", steveRogers.getLastName());
@@ -171,28 +169,29 @@ public class JsonConverter {
         userMap.put("gender", steveRogers.getGender());
         userMap.put("company", steveRogers.getCompany());
         userMap.put("email", steveRogers.getEmail());
-        userMap.put("phone", String.valueOf(steveRogers.getPhone()));
+        userMap.put("phone", String.valueOf(steveRogers.getPhone()).replace(" ", ""));
         userMap.put("address", String.valueOf(steveRogers.getAddress()));
-        userMap.put("friends", String.valueOf(steveRogers.getFriends(tonyStark)));
+        userMap.put("friends", String.valueOf(steveRogers.getFriends(tonyStark)).replace(" {", "{"));
 
 
         Set<Map.Entry<String, String>> entries = userMap.entrySet();
         for (Map.Entry<String, String> entry : entries) {
             String json = quotes + entry.getKey() + quotes + ":" + quotes + entry.getValue() + quotes + ",";
-            if (entry.getKey().equalsIgnoreCase("phone")) {
+            if (entry.getKey().equalsIgnoreCase("id") || entry.getKey().equals("age")) {
                 json = quotes + entry.getKey() + quotes + ":" + entry.getValue() + ",";
             }
-            if (entry.getKey().equalsIgnoreCase("address")) {
-                json = quotes + entry.getKey() + quotes + ":" + entry.getValue() + ",";
+                if (entry.getKey().equalsIgnoreCase("phone") || entry.getKey().equalsIgnoreCase("address")) {
+                    json = quotes + entry.getKey() + quotes + ":" + entry.getValue() + ",";
+                }
+                if (entry.getKey().equalsIgnoreCase("friends")) {
+                    json = quotes + entry.getKey() + quotes + ":" + entry.getValue();
+                }
+                result += json;
             }
-            if (entry.getKey().equalsIgnoreCase("friends")) {
-                json = quotes + entry.getKey() + quotes + ":" + entry.getValue() ;;
-            }
-            result += json;
+            return start + result + finish;
         }
-        return start + result + finish;
     }
-}
+
 
 
 //
