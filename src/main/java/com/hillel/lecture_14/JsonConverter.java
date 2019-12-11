@@ -157,43 +157,22 @@ public class JsonConverter {
         thor.setLastName("Son of Oddin");
 
         steveRogers.setFriends(Arrays.asList(tonyStark, natashaRomanova, thor));
-
-//
-//        Address address = new Address();
-//        Friend friend = new Friend();
-//        address.setCity("New-York");
-//        address.setStreet("Brooklyn 75");
-//
-//        users.setId(5);
-//        users.setFirstName("Steve");
-//        users.setLastName("Rogers");
-//        users.setAge(99);
-//        users.setGender("male");
-//        users.setCompany("Avengers");
-//        users.setEmail("steve@avengers.com");
-//        users.setPhone(Arrays.asList("\"+19-123-136-35-48\",\"+19-916-812-99-00\""));
-//        users.setAddress(address);
-//        users.setFriends(Arrays.asList(friend));
-
-
 //        TODO implements result
         String result = "";
         String start = "\"{";
         String finish = "}\"";
         String quotes = "\"";
-//        String list1Start = "\":[\"";
-//        String list1Finish = "\"],";
 
         Map<String, String> userMap = new HashMap<>();
-        userMap.put("id", String.valueOf(users.getId()));
-        userMap.put("firstName", users.getFirstName());
-        userMap.put("lastName", users.getLastName());
-        userMap.put("age", String.valueOf(99));
-        userMap.put("gender", users.getGender());
-        userMap.put("company", users.getCompany());
-        userMap.put("email", users.getEmail());
+        userMap.put("id", String.valueOf(steveRogers.getId()));
+        userMap.put("firstName", steveRogers.getFirstName());
+        userMap.put("lastName", steveRogers.getLastName());
+        userMap.put("age", String.valueOf(steveRogers.getAge()));
+        userMap.put("gender", steveRogers.getGender());
+        userMap.put("company", steveRogers.getCompany());
+        userMap.put("email", steveRogers.getEmail());
         userMap.put("phone", String.valueOf(steveRogers.getPhone()));
-        userMap.put("address", String.valueOf(users.getAddress()));
+        userMap.put("address", String.valueOf(steveRogers.getAddress()));
         userMap.put("friends", String.valueOf(steveRogers.getFriends(tonyStark)));
 
 
@@ -214,3 +193,21 @@ public class JsonConverter {
         return start + result + finish;
     }
 }
+
+
+//
+//        Address address = new Address();
+//        Friend friend = new Friend();
+//        address.setCity("New-York");
+//        address.setStreet("Brooklyn 75");
+//
+//        users.setId(5);
+//        users.setFirstName("Steve");
+//        users.setLastName("Rogers");
+//        users.setAge(99);
+//        users.setGender("male");
+//        users.setCompany("Avengers");
+//        users.setEmail("steve@avengers.com");
+//        users.setPhone(Arrays.asList("\"+19-123-136-35-48\",\"+19-916-812-99-00\""));
+//        users.setAddress(address);
+//        users.setFriends(Arrays.asList(friend));
