@@ -91,7 +91,7 @@ public class User {
         this.address = address;
     }
 
-    public List<Friend> getFriends() {
+    public List<Friend> getFriends(Friend eatonBarlow) {
         return friends;
     }
 

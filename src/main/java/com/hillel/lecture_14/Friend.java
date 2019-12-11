@@ -35,15 +35,28 @@ public class Friend {
 
     @Override
     public String toString() {
-        return "\"friends\":[{" +
-                "\"id\":" + 6 + "," +
-                "\"firstName\":" + "\"" + "Tony" +"\"" + "," +
-                "\"lastName\":" + "\"" + "Stark"+ "\"" + "}," +
-                "{\"id\":" + 7 +  "," +
-                "\"firstName\":" + "\"" + "Natasha" +"\"" + "," +
-                "\"lastName\":" + "\"" + "Romanova"+ "\"" + "}," +
-                "{\"id\":" + 8 +  "," +
-                "\"firstName\":" + "\"" + "Thor" +"\"" + "," +
-                "\"lastName\":" + "\"" + "Son of Oddin" + "\"" +"}";
+        return "{" +
+                "\"id\":" + id + "," +
+                "\"firstName\":" + "\"" + firstName + "\"" + "," +
+                "\"lastName\":" + "\"" + lastName + "\"" + "}";
+//                "{\"id\":" + id + "," +
+//                "\"firstName\":" + "\"" + firstName + "\"" + "," +
+//                "\"lastName\":" + "\"" + lastName + "\"" + "}," +
+//                "{\"id\":" + id + "," +
+//                "\"firstName\":" + "\"" + firstName + "\"" + "," +
+//                "\"lastName\":" + "\"" + lastName + "\"" + "}";
     }
 }
+//@Override
+//    public String toString() {
+//        return "\"friends\":[{" +
+//                "\"id\":" + 6 + "," +
+//                "\"firstName\":" + "\"" + "Tony" +"\"" + "," +
+//                "\"lastName\":" + "\"" + "Stark"+ "\"" + "}," +
+//                "{\"id\":" + 7 +  "," +
+//                "\"firstName\":" + "\"" + "Natasha" +"\"" + "," +
+//                "\"lastName\":" + "\"" + "Romanova"+ "\"" + "}," +
+//                "{\"id\":" + 8 +  "," +
+//                "\"firstName\":" + "\"" + "Thor" +"\"" + "," +
+//                "\"lastName\":" + "\"" + "Son of Oddin" + "\"" +"}";
+//    }

@@ -26,9 +26,9 @@ public class Address {
 
     @Override
     public String toString() {
-        return "\"address\":{" +
+        return "{" +
                 "\"city\":" + "\"" + city + '\"' +
-                ",\"street\":" + "\"" + street + "\"},";
+                ",\"street\":" + "\"" + street + "\"}";
     }
     //    @Override
 //    public String toString() {
